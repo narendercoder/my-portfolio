@@ -1,0 +1,44 @@
+.resume-items .resume-item.active .date{
+    border: 1px solid var(--highlight-primary);
+    color: var(--highlight-primary);
+}
+
+.resume-items .resume-item{
+    position: relative;
+    padding: 30px 0 0 0;
+      .date {
+        position: relative;
+        display: inline-block;
+        margin: 0 0 11px 0;
+        padding: 0 5px;
+        font-size: 0.8rem;
+        line-height: 18px;
+        font-weight: 400;
+        color: var(--lightgrey);
+        border: 1px solid var(--lightgrey);
+        border-radius: 4px;
+    }
+    .name {
+        font-size: 1rem;
+        color: var(--black);
+        font-weight: 500;
+        text-transform: none;
+    }
+    .company {
+        margin: 0 0 11px 0;
+        font-size: 0.8rem;
+        color: var(--grey);
+        font-weight: 400;
+        text-transform: none;
+    }
+    .experience-desc{
+        li{
+            list-style: disc;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .content.about .row .col:first-child {
+        padding-bottom: 0;
+    }
+}

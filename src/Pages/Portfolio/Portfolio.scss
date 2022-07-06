@@ -1,0 +1,67 @@
+.box-item .image .info:before {
+  background: -moz-linear-gradient(-45deg, rgba(120, 204, 109, 0.5) 0%, rgba(120, 204, 109, 0.01) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(120, 204, 109, 0.5) 0%, rgba(120, 204, 109, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(120, 204, 109, 0.5) 0%, rgba(120, 204, 109, 0.01) 100%);
+}
+
+.box-item .image .info:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.p-section .grid-items {
+  position: relative;
+  min-height: 1px;
+  height: 100%;
+
+  .grid-item {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .col {
+    flex: none;
+
+    .box-item{
+      position: relative;
+      text-align: center;
+
+      &:hover img {
+        transform: scale(1.2);
+      }
+
+      .image{
+        position: relative;
+        overflow: hidden;
+
+        a {
+          display: initial;
+
+          img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: all 0.5s;
+          }
+        }
+
+      }
+
+      .desc{
+        position: relative;
+        padding: 10px 0 0 0;
+
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
