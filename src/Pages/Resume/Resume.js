@@ -4,9 +4,9 @@ import { SkillSet } from "../../Config/Config";
 import { Experience, Education } from "../../Config/Config";
 import { FaUniversity, FaBriefcase } from "react-icons/fa";
 import Card from "./Card";
-import "./Skill.scss";
+import "./Resume.scss";
 
-function Skills() {
+function Resume() {
   const SkillCard = (val, ind) => {
     return <Card key={ind} name={val.name} imgsrc={val.imgsrc} />;
   };
@@ -80,4 +80,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default Resume;

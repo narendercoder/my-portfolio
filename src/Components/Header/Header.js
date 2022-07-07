@@ -31,7 +31,7 @@ function Header() {
           </NavLink>
           </li>
           <li>
-          <NavLink className="nav-link link" to="/skills">
+          <NavLink className="nav-link link" to="/resume">
           <span className="icon">
           <IoMdListBox/>
           </span>

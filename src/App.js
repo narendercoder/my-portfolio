@@ -5,7 +5,7 @@ import Home from "./Pages/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Portfolio from "./Pages/Portfolio/Portfolio";
-import Skills from "./Pages/Skills/Skills";
+import Resume from "./Pages/Resume/Resume";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Footer from "./Components/Footer/Footer";
@@ -179,7 +179,7 @@ function App() {
               <Route index element={<About />} />
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/skills" element={<Skills />} />
+              <Route path="/resume" element={<Resume />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Home />}/>
             </Route>
