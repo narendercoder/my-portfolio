@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Home from "../Home/Home";
 import "./Contact.scss";
 import { FaTelegramPlane } from "react-icons/fa";

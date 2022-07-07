@@ -12,11 +12,13 @@ import Footer from "./Components/Footer/Footer";
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineDarkMode,MdOutlineLightMode } from 'react-icons/md';
 import { AiOutlineBars,AiOutlineClose } from 'react-icons/ai';
+import Preloader from "./Components/Preloader/Preloader";
+
 
 function App() {
   let [theme, setTheme] = useState("light-theme");
   let [sidebar, setSidebar] = useState(false);
-
+  const [loading, setLoading] = useState(false);
   const maincursor = useRef(null);
   const particlesInit = async (main) => {
     console.log(main);
@@ -34,9 +36,7 @@ function App() {
       setTheme("dark-theme");
      }
   }
-  useEffect(()=>{
-    document.body.className = theme;
-  },[theme]);
+
 
   const showSidebar = () => {
     if(sidebar === false){
@@ -71,8 +71,20 @@ function App() {
       return child;
     })
   })
+  useEffect(()=>{
+    document.body.className = theme;
+  },[theme]);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+     setLoading(false)
+    },3000)
+  },[]);
   return (
     <>
+    {
+      loading ? <Preloader />
+      : <>
     <div className="cursor" ref={maincursor}>
     </div>
     <div className="toggle-btn">
@@ -176,6 +188,8 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
+    </>
+    }
     </>
   );
 }
