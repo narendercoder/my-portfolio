@@ -18,7 +18,7 @@ const Home = () => {
         <div className="profile">
           <div className="slide"></div>
           <div className="image">
-            <img src="profile(1).jpg" alt="" />
+          <img src="profile(1).jpg" width="936" height="936" alt="profile" />
           </div>
           <div className="title">Narender Singh Bisht</div>
           <div className="subtitle subtitle-typed">
@@ -49,6 +49,7 @@ const Home = () => {
               href="https://www.facebook.com/narender.singhbisht.3538"
               rel="noreferrer"
               target="_blank"
+              aria-label="facebook"
             >
               <FaFacebook />
             </a>
@@ -57,6 +58,7 @@ const Home = () => {
               href="https://www.instagram.com/artist_narender/"
               rel="noreferrer"
               target="_blank"
+              aria-label="instagram"
             >
               <FaInstagram />
             </a>
@@ -65,6 +67,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/narender-singh-bisht-4529051b7/"
               rel="noreferrer"
               target="_blank"
+              aria-label="linkedin"
             >
               <FaLinkedin />
             </a>
@@ -73,6 +76,7 @@ const Home = () => {
               href="https://twitter.com/Narender343872"
               rel="noreferrer"
               target="_blank"
+              aria-label="twitter"
             >
               <FaTwitter />
             </a>
@@ -81,6 +85,7 @@ const Home = () => {
               href="https://github.com/narendercoder"
               rel="noreferrer"
               target="_blank"
+              aria-label="github"
             >
               <FaGithub />
             </a>

@@ -5,7 +5,7 @@ function Preloader() {
 
   return (
     <div className='preloader'>
-       <img src="preloader/ripple.svg" alt="" srcset="" />
+       <img src="preloader/ripple.svg" alt="preloader"/>
     </div>
   )
 }

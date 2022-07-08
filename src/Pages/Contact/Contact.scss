@@ -47,7 +47,7 @@
             button{
                 box-shadow:  5px 5px 10px rgba(120, 204, 109,0.2);
                 &:hover{
-                background: var(--txt-color);
+                background: var(--highlight-primary);
                 border: none;
                 .icon {
                     margin-left: 10px;

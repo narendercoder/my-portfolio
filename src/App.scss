@@ -92,7 +92,15 @@ body.dark-theme {
     a:hover {
       color: var(--highlight-secondary);
     }
-
+     .profile .react-typewriter-text-wrap{
+      .react-typewriter-text{
+        color: #ff9800 !important;
+        .react-typewriter-pointer{
+          background-color: #ff9800 !important;
+        }
+      }
+      
+     } 
     .cursor.cursor-hover {
       border: 1px solid rgb(255, 255, 255);
     }
@@ -124,6 +132,11 @@ body.dark-theme {
 
         .nav-link {
           background: var(--bg-color-secondary);
+
+          &:hover .icon,
+          &:hover .link{
+              color: var(--highlight-secondary);
+          }
         }
 
         .icon,
@@ -160,7 +173,12 @@ body.dark-theme {
     .content button {
       box-shadow: none;
     }
-
+    .content .row button{
+        box-shadow:  5px 5px 10px rgba(255, 152, 0,0.2);
+        &:hover{
+          background-color: var(--highlight-secondary);
+        }
+      }
     input,
     textarea,
     button,
@@ -176,7 +194,7 @@ body.dark-theme {
     }
 
     .link {
-      color: white;
+      color: var(--white);
 
       &:before {
         background: radial-gradient(ellipse at top,
@@ -360,6 +378,7 @@ a {
   align-items: center;
   overflow-x: hidden;
   background: var(--bg-gradient);
+  transition: all 0.5s linear;
 }
 
 .container {
@@ -859,30 +878,6 @@ a:hover {
     padding: 0 35px;
   }
 }
-
-.cursor {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  transform: translate3d(0, 0, 0);
-  transition: transform 250ms ease-out;
-  z-index: 100;
-  opacity: 0.3;
-}
-
-.cursor.cursor-hover {
-  opacity: 1;
-  width: 70px;
-  height: 70px;
-  background-color: transparent;
-  border: 1px solid black;
-}
-
 .grid-item {
   position: relative;
   display: flex;
@@ -893,42 +888,10 @@ a:hover {
   align-items: center;
 }
 
-@media (max-width: 1010px) {
-  .cursor {
-    display: none;
-  }
-}
 
-.toggle-btn {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  top: 0;
-  right: 10px;
-  width: 100vw;
-  height: 40px;
-  z-index: 80;
-  transition: all 0.3s linear;
- .toggle-theme{
-  margin-right: 10px;
- }
-  .link {
-    position: relative;
-    display: flex;
-    line-height: 0;
-    height: 100%;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: flex-end;
-
-    &::before {
-      content: normal;
-    }
-  }
-}
-@media (min-width: 560px) {
-  .toggle-btn .toggle-header{
-    display: none;
+.menu-btn .nav-link{
+  height: auto;
+  &::before{
+      content:unset;
   }
 }
