@@ -11,8 +11,8 @@ const Footer = React.lazy(()=>import("./Components/Footer/Footer"));
 function Content() {
   return (
     <BrowserRouter>
-    <div className="container">
     <Suspense fallback={<div><CircularProgress/></div>} >
+    <div className="container">
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<About />} />
@@ -23,9 +23,9 @@ function Content() {
           <Route path="*" element={<Home />}/>
         </Route>
       </Routes>
-      </Suspense>
     </div>
     <Footer />
+    </Suspense>
   </BrowserRouter>
   )
 }

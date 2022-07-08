@@ -22,7 +22,6 @@ function App() {
       : <>
       <Suspense fallback={<div><CircularProgress/></div>} >
      <Cursor />
-  
     <div className="app">
       <Particle/>
       <Content />

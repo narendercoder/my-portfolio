@@ -378,7 +378,7 @@ a {
   align-items: center;
   overflow-x: hidden;
   background: var(--bg-gradient);
-  transition: all 0.5s linear;
+  transition: all 0.5s li;
 }
 
 .container {
@@ -440,7 +440,7 @@ input[type="submit"] {
     &:after {
       content: "";
       position: absolute;
-      width: 95%;
+      width: auto;
       height: 1px;
       background: var(--gradient3);
     }
@@ -611,7 +611,9 @@ input[type="submit"] {
       rgba(197, 202, 213, 0.7) 0%,
       rgba(255, 255, 255, 0) 70%);
 }
-
+.row .col.border-line-v:first-child:before {
+  display: none;
+}
 ol,
 ul,
 li {
