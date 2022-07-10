@@ -22,7 +22,7 @@
                 vertical-align: top;
                 width: 50%;
                 text-align: left;
-                font-size: 0.88rem;
+                font-size: 0.8rem;
 
                 &:first-child {
                     padding-top: 0;
@@ -64,6 +64,7 @@
     padding-bottom: 0;
 }
 .content.about .row .col.col-6:nth-child(2) {
+    padding-right: 10px;
     padding-top: 15px;
 }
 @media (max-width: 1240px){

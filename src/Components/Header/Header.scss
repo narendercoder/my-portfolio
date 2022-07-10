@@ -156,11 +156,15 @@
             background: var(--bg-color-primary);
             border-radius: 0px;
             z-index: 2;
+            padding-right: 10px;
+            .toggle-btn{
+                position: relative;
+            }
             .nav-link{
                 height: auto;
                 img{
                     float: left;
-                    width: 10%;
+                    width: 20%;
                     border-radius: 50%;
                 }
             }
@@ -184,7 +188,8 @@
                     width: 100%;
 					min-width: 20%;
                     border-radius: 0px;
-                    &:first-child a{
+                    &:first-child a,
+                    &:last-child a{
                         border-radius: 0px;
                     }
 
@@ -250,7 +255,7 @@ body.sidebar-active{
     z-index: 80;
     transition: all 0.3s linear;
    .toggle-theme{
-    margin-right: 10px;
+    margin-right: 20px;
    }
     .link {
       position: relative;
