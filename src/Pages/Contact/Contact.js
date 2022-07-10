@@ -70,7 +70,7 @@ function Contact() {
               in Touch
             </div>
             <div className="row">
-              <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
+              <div className="col col-12 border-line-v">
                 <div className="map">
                   <div style={{ width: "100%" }}>
                     <iframe
@@ -95,11 +95,11 @@ function Contact() {
                 Form
               </div>
               <div className="row">
-                <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
+                <div className="col col-12 border-line-v">
                   <div className="contact_form">
                     <form id="cform" method="post" noValidate="novalidate">
                       <div className="row">
-                        <div className="col col-d-6 col-t-6 col-m-12">
+                        <div className="col col-6">
                           <div className="group-val">
                             <input
                               type="text"
@@ -110,7 +110,7 @@ function Contact() {
                             ></input>
                           </div>
                         </div>
-                        <div className="col col-d-6 col-t-6 col-m-12">
+                        <div className="col col-6 ">
                           <div className="group-val">
                             <input
                               type="text"
@@ -121,7 +121,7 @@ function Contact() {
                             ></input>
                           </div>
                         </div>
-                        <div className="col col-d-6 col-t-6 col-m-12">
+                        <div className="col col-6">
                           <div className="group-val">
                             <input
                               type="text"
@@ -132,7 +132,7 @@ function Contact() {
                             ></input>
                           </div>
                         </div>
-                        <div className="col col-d-6 col-t-6 col-m-12">
+                        <div className="col col-6">
                           <div className="group-val">
                             <input
                               type="text"
@@ -143,7 +143,7 @@ function Contact() {
                             ></input>
                           </div>
                         </div>
-                        <div className="col col-d-12 col-t-12 col-m-12">
+                        <div className="col col-12">
                           <div className="group-val">
                             <textarea
                               name="message"

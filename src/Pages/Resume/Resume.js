@@ -21,7 +21,7 @@ function Resume() {
               <span>Resume</span>
             </div>
             <div className="row">
-              <div className="col ol-d-6 col-t-6 col-m-12 border-line-v">
+              <div className="col col-6  border-line-v">
                 <div className="resume-title border-line-h">
                   <div className="icon">
                     <FaBriefcase />
@@ -36,14 +36,16 @@ function Resume() {
                         <div className="name">{val.name}</div>
                         <div className="company">{val.company}</div>
                         <p className="experience-desc">
+                        <ul>
                         <li>{val.desc[0]}</li>
                         <li>{val.desc[1]}</li>
+                        </ul>
                         </p>
                       </div>
                     ))}
                 </div>
               </div>
-              <div className="col ol-d-6 col-t-6 col-m-12 border-line-v">
+              <div className="col col-6  border-line-v">
                 <div className="resume-title border-line-h">
                   <div className="icon">
                     <FaUniversity />

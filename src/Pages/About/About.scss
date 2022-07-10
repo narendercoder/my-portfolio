@@ -1,6 +1,8 @@
-.content.about .row .col.col-d-6 {
+.content.about .row .col.col-6 {
     width: 100%;
-
+    &::before{
+        content: initial;
+    }
     .info-list {
         padding-top: 0;
 
@@ -58,13 +60,10 @@
         }
     }
 }
-.content.about .row .col{
-  flex: none;
-}
-.content.about .row .col.col-d-6:first-child{
+.content.about .row .col.col-6:first-child{
     padding-bottom: 0;
 }
-.content.about .row .col.col-d-6:nth-child(2) {
+.content.about .row .col.col-6:nth-child(2) {
     padding-top: 15px;
 }
 @media (max-width: 1240px){

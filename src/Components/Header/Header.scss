@@ -29,7 +29,7 @@
     text-align: center;
     border-radius: 4px;
     float: left;
-
+    transition: all 0.5s linear;
     .menu-btn {
         margin-bottom: 8px;
         position: relative;
@@ -71,6 +71,7 @@
                 font-size: 0.75rem;
                 font-weight: 500;
                 text-transform: uppercase;
+                
                  
                 &:hover .icon,
                 &:hover .link{
@@ -88,6 +89,7 @@
                      font-weight: 500;
                      text-transform: uppercase;
                      color: var(--black);
+                     transition: all 0.2s ease-in;
                      &:before{
                          content: normal;
                      }
@@ -106,6 +108,7 @@
                     font-size: 1.25rem;
                     color: var(--icon-color-secondary);
                     line-height: 30px;
+                    transition: all 0.2s ease-in;
                 }
             }
         }
@@ -263,3 +266,4 @@ body.sidebar-active{
       }
     }
   }
+

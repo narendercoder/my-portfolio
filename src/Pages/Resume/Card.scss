@@ -1,14 +1,26 @@
 .cards {
+  position: relative;
   width: 120px;
   height: 100px;
-  margin: 20px 0px 20px 0px;
+  margin: 10px 0px 10px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid var(--highlight-primary);
   border-radius: 10px;
   cursor: pointer;
-
+  &:after {
+    content: "";
+    position: absolute;
+    width: auto;
+    height: 1px;
+    background: var(--gradient3);
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    margin: -10px auto;
+    padding: 0;
+}
   &:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -21,6 +33,7 @@
 
     img {
       width: 30%;
+      height: auto;
     }
   }
   .card-title {
@@ -29,6 +42,9 @@
     .title {
       text-transform: capitalize;
       font-size: 0.9rem;
+      &::after{
+        content: initial;
+      }
     }
   }
 }

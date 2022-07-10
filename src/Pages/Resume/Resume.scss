@@ -32,9 +32,15 @@
         text-transform: none;
     }
     .experience-desc{
+        position: relative;
+       ul{
+        position: relative;
+        margin: 0 auto;
+        padding-inline-start: 20px;
         li{
             list-style: disc;
         }
+       }
     }
 }
 @media (max-width: 1199px){

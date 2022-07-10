@@ -22,18 +22,18 @@ function About() {
               Me
             </div>
             <div className="row">
-              <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
+              <div className="col col-6 border-line-v">
                 <div className="text-box">
                   <p>
                     <b>Hello! I'm Narender Singh Bisht</b>, Full Stack developer
                     from delhi, India. I am currently pursuing Engineering in
                     Electrical and Electronics from Maharaja Agrasen Institute
-                    of Technology. I love website design and building and
-                    customization.
+                    of Technology. My hobby is digital art and learning new things and technologies. I love the simple and minimalistic design as you can see in my
+                    projects.
                   </p>
                 </div>
               </div>
-              <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
+              <div className="col col-6 border-line-v">
                 <div className="info-list">
                   <ul>
                     <li>
@@ -62,7 +62,7 @@ function About() {
               <span>Hobbies</span>
             </div>
             <div className="row">
-              <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
+              <div className="col col-6 col-t-6 col-m-12 border-line-v">
                 <div className="hobby-list">
                   <ul>
                     <li>

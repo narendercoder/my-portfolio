@@ -3,7 +3,6 @@
   float: left;
   z-index: 11;
   border-radius: 4px;
-
   &:before {
     content: "";
     position: absolute;
@@ -118,7 +117,9 @@
                 height: auto;
                 width: auto;
                 margin: 0 6px;
+                font-size: 1.1rem;
                 display: inline-block;
+                transition: all 0.2s linear;
                 &:before{
                     content: none;
                 }
@@ -169,7 +170,9 @@
 
 
 }
-
+.card-section .profile .social a:hover{
+  transform: translateY(-3px);
+}
 .card-section .profile .social a:nth-child(2):hover{
      color:var(--fandango);
 }
