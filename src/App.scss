@@ -706,9 +706,26 @@ a:hover {
   .grid-item {
     position: relative;
     margin-top: 10px;
-    padding: 0 35px;
   }
 }
+@media (min-width: 560px){
+  .skills .grid-items {
+    .grid-item {
+      padding: 0 35px;
+    }
+  }
+}
+@media (max-width: 559px){
+  .skills .grid-items {
+    .grid-item {
+      justify-content: center;
+      .cards{
+        margin: 10px;
+      }
+    }
+  }
+}
+
 .grid-item {
   position: relative;
   display: flex;

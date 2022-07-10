@@ -80,6 +80,16 @@ html {
     font-size: 80%;
   }
 }
+@media (max-width: 280px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 560px){
+.row .col.col-6 {
+    width: 100%;
+}
+}
 @media (min-width: 360px) and (max-width: 560px) {
   html {
     font-size: 93%;
