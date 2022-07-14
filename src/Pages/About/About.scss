@@ -1,76 +1,148 @@
 .content.about .row .col.col-6 {
-    width: 100%;
-    &::before{
-        content: initial;
-    }
-    .info-list {
-        padding-top: 0;
+  width: 100%;
+  &::before {
+    content: initial;
+  }
+  .info-list {
+    padding-top: 0;
 
-         ul {
-            margin: 0;
-            padding: 0;
-            font-size: 0;
-            list-style: none;
-            overflow: hidden;
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      list-style: none;
+      overflow: hidden;
 
-            li {
-                line-height: 1.6;
-                position: relative;
-                text-align: right;
-                padding: 0 0 5px 0;
-                display: inline-block;
-                vertical-align: top;
-                width: 50%;
-                text-align: left;
-                font-size: 0.8rem;
+      li {
+        line-height: 1.6;
+        position: relative;
+        text-align: right;
+        padding: 0 0 5px 0;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        text-align: left;
+        font-size: 0.8rem;
 
-                &:first-child {
-                    padding-top: 0;
-                }
-            }
-           
-            
-            
+        &:first-child {
+          padding-top: 0;
         }
+      }
+    }
+  }
+  
+}
+.content.hobby .row .col.col-6{
+    width: 100%;
+    &::before {
+      content: initial;
     }
     .hobby-list {
         padding-top: 0;
-
-         ul {
-            margin: 0;
-            padding: 0;
-            font-size: 0;
-            list-style: none;
-
-            li {
-                line-height: 1.6;
-                position: relative;
-                text-align: right;
-                padding: 0 0 5px 0;
-                display: inline-block;
-                vertical-align: top;
-                width:100%;
-                text-align: left;
-                font-size: 0.89rem;
-
-                &:first-child {
-                    padding-top: 0;
-                }
+    
+        ul {
+          margin: 0;
+          padding: 0;
+          font-size: 0;
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            line-height: 1.6;
+            position: relative;
+            padding: 0 5px 0px 5px;
+            display: inline-block;
+            vertical-align: top;
+            flex-grow: 1;
+            text-align: left;
+            font-size: 0.89rem;
+    
+            &:first-child {
+              padding-top: 0;
             }
+          }
         }
-    }
+      }
 }
-.content.about .row .col.col-6:first-child{
-    padding-bottom: 0;
+.content .row{
+    &::before{
+        content: normal;
+      }
+}
+.content.about .row .col.col-6:first-child {
+  padding-bottom: 0;
 }
 .content.about .row .col.col-6:nth-child(2) {
-    padding-right: 10px;
-    padding-top: 15px;
+  padding-right: 10px;
+  padding-top: 15px;
 }
-@media (max-width: 1240px){
-    .content.about .row .col.col-6 .info-list ul li{
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%;
+@media (max-width: 1240px) {
+  .content .row .col.col-6 .info-list ul li {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+.content.services .row .col.col-6 {
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .name {
+      font-weight: 500;
+      font-size: 1.06rem;
+      color: var(--title-clr-secondary);
     }
+    .icon {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      justify-content: center;
+      background-color: var(--highlight-primary);
+      font-size: 1.8rem;
+      color: var(--white);
+    }
+    .desc {
+      p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+
 }
+
+
+  body.dark-theme{
+    .content.services .row .col.col-6 {
+        .icon{
+            background-color: var(--highlight-secondary);
+        }
+        .name{
+            color: var(--title-clr-primary);
+        }
+    }
+  }
+  @media (min-width: 561px){
+    .service-items.border-line-v:after {
+        margin: 0 0 0 -1px;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        
+        background: radial-gradient(
+          ellipse at top,
+          #dddddd 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+      }
+  }

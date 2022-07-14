@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Services } from "../../Config/Config";
 import Home from "../Home/Home";
 import "./About.scss";
+
 
 function About() {
   const [age, setAge] = useState("");
@@ -25,11 +27,10 @@ function About() {
               <div className="col col-6 border-line-v">
                 <div className="text-box">
                   <p>
-                    <b>Hello! I'm Narender Singh Bisht</b>, Full Stack developer
-                    from delhi, India. I am currently pursuing Engineering in
-                    Electrical and Electronics from Maharaja Agrasen Institute
-                    of Technology. My hobby is digital art and learning new things and technologies. I love the simple and minimalistic design as you can see in my
-                    projects.
+                    <b>I'm</b>{" "} {new Date().getFullYear() <=2024 ? ` a ${new Date().getFullYear() - 2020}nd year B.tech student pursuing ` : "graduated"}
+                    Electrical and Electronics Engineering from Maharaja Agrasen Institute of Technology. By Profession, I'm a full-stack web developer. 
+                    I love the simple and minimalistic design and learning new things and technologies. 
+                    I'm also a digital artist by passion.
                   </p>
                 </div>
               </div>
@@ -57,12 +58,37 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="content about">
+  
+          <div className="content services">
+            <div className="title">
+              <span className="first-word">My{" "}</span>Services
+            </div>
+            <div className="row service-items border-line-v" >
+            {Services.map((val,ind)=>(
+                    <div key={ind} className="col col-6 border-line-h">
+                      <div className="service-item">
+                        <div className="icon">
+                          <span>
+                            {val.icon}
+                          </span>
+                        </div>
+                        <div className="name"><span>{val.name}</span></div>
+                        <div className="desc">
+                        <div>
+                        <p>{val.desc}</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+            ))}
+            </div>
+          </div>
+          <div className="content hobby">
             <div className="title">
               <span>Hobbies</span>
             </div>
             <div className="row">
-              <div className="col col-6 col-t-6 col-m-12 border-line-v">
+              <div className="col col-6 border-line-v">
                 <div className="hobby-list">
                   <ul>
                     <li>

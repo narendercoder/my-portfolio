@@ -1,3 +1,6 @@
+import { BiCodeAlt } from 'react-icons/bi';
+import { IoBrushOutline } from 'react-icons/io5';
+
 export const SkillSet=[
     {
         name: "C",
@@ -102,17 +105,24 @@ export const ProjImg = [
     },
     ]
 export const Experience=[
+    
     {
         date: "Sep 2021 - Mar 2022",
         name: "Graphic Designer",
         company: "Dharaksha Ecosolutions",
-        desc: ["Design and update website.","Design different media post in Instagram."]
+        desc: ["Collaborate with social media teams.","Design and update website.","Design different media post on Instagram."]
+    },
+    {
+        date: "Feb 2020 - Present",
+        name: "Digital Artist",
+        company: "",
+        desc: ["Self-taught digital artist on instagram"]
     },
     
 ]
 export const Education=[
     {
-        date: "2020-2024",
+        date: "Dec 2020-Present",
         name: "Maharaja Agrasen Institute of Technology",
         company: "Rohini Sec-22, Delhi-86",
         desc: "Btech Degree in Electrical and Electronic Engineering Maharaja Agrasen Institute of Technology, Rohini, Delhi"
@@ -124,10 +134,21 @@ export const Education=[
         desc: "Completed Graphic Design course"
     },
     {
-        date: "2020-2024",
+        date: "2018-2019",
         name: "XIIth",
         company: "Govt Boys Sr Sec School No-2 Roop Nagar Delhi",
         desc: ""
     },
     
+]
+export const Services=[
+    {
+         icon: <BiCodeAlt />,
+         name: "Web Development",
+         desc: "develop creative and responsive website layouts",
+    },
+    {   icon: <IoBrushOutline/>,
+        name: "Digital Art",
+        desc: "",
+    }
 ]

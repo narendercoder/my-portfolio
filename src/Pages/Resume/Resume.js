@@ -31,14 +31,15 @@ function Resume() {
                 <div className="resume-items">
                   {Experience &&
                     Experience.map((val, ind) => (
-                      <div key={ind} className="resume-item border-line-h">
+                      <div key={ind} className={val.date.includes("Present") ? `${'resume'}-${'item'} ${'active'} ${'border'}-${'line'}-${'h'}` : `${'resume'}-${'item'} ${'border'}-${'line'}-${'h'}`}>
                         <div className="date">{val.date}</div>
                         <div className="name">{val.name}</div>
                         <div className="company">{val.company}</div>
                         <p className="experience-desc">
                         <ul>
-                        <li>{val.desc[0]}</li>
-                        <li>{val.desc[1]}</li>
+                        {val.desc.map((val)=>(
+                          <li>{val}</li>
+                        ))}
                         </ul>
                         </p>
                       </div>
@@ -56,7 +57,7 @@ function Resume() {
                   {Education && 
                   Education.map((val, ind) => (
                     <div key={ind} 
-                    className={ind === 0 ? `${'resume'}-${'item'} ${'active'} ${'border'}-${'line'}-${'h'}` : `${'resume'}-${'item'} ${'border'}-${'line'}-${'h'}`}>
+                    className={val.date.includes("Present") ? `${'resume'}-${'item'} ${'active'} ${'border'}-${'line'}-${'h'}` : `${'resume'}-${'item'} ${'border'}-${'line'}-${'h'}`}>
                       <div className="date">{val.date}</div>
                       <div className="name">{val.name}</div>
                       <div className="company">{val.company}</div>

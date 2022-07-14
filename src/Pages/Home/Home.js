@@ -33,7 +33,6 @@ const Home = () => {
               cursorColor="#78cc6d"
               multiText={[
                 "Developer",
-                "Designer",
                 "Digital Artist",
                 "Student",
                 "Learner",
@@ -92,7 +91,7 @@ const Home = () => {
           </div>
           <div className="links">
             <a href="Resume.pdf" className="link" rel="noreferrer" target="_blank">
-              <span className="text">download cv</span>
+              <span className="text">download CV</span>
               <FaCloudDownloadAlt className="icon d-icon" />
             </a>
             <Link to="/contact" className="link">
