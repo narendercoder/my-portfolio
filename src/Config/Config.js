@@ -47,6 +47,10 @@ export const SkillSet=[
         imgsrc: "images/express.png"
     },
     {
+        name: "Next Js",
+        imgsrc: "images/Nextjs-logo.svg"
+    },
+    {
         name: "MongoDB",
         imgsrc: "images/mongodb.png"
     },
@@ -84,24 +88,53 @@ export const SkillSet=[
 
 export const ProjImg = [
     {
+        id: "1",
         name: "Pokemon-app",
-        imgsrc: "projectImg/p_0.png",
+        category: "react",
+        imgsrc: "projectImg/react/p_0.png",
         href: "https://react-pokemon-app1.netlify.app/"
     },
     {
+        id: "2",
         name: "Crypto-Tracker",
-        imgsrc: "projectImg/p_1.png",
+        category: "react",
+        imgsrc: "projectImg/react/p_1.png",
         href: "https://crypto-tracker1.netlify.app/"
     },
     {
+        id: "3",
         name: "Weather-app",
-        imgsrc: "projectImg/p_2.png",
+        category: "react",
+        imgsrc: "projectImg/react/p_2.png",
         href: "https://narendercoder.github.io/weatherApp/"
     },
     {
-        name: "Movie-app",
-        imgsrc: "projectImg/p_3.png",
-        href: "https://react-moviex.netlify.app/"
+        id: "4",
+        name: "Snake Game",
+        category: "js",
+        imgsrc: "projectImg/js/p_0.png",
+        href: "https://narendercoder.github.io/Snake-Game/"
+    },
+    {
+        id: "5",
+        name: "Spotify",
+        category: "js",
+        imgsrc: "projectImg/js/p_1.png",
+        href: "https://narendercoder.github.io/Spotify/"
+    },
+    {
+        id: "6",
+        name: "Todolist",
+        category: "react",
+        imgsrc: "projectImg/react/p_4.png",
+        href: "https://todolist82.netlify.app/"
+    },
+    {
+        id: "7",
+        name: "Tic-Tac-toe",
+        category: "js",
+        imgsrc: "projectImg/js/p_2.png",
+        href: "https://narendercoder.github.io/Tic_Tac_Toe/"
     },
     ]
 export const Experience=[

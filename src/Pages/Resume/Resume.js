@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "../Home/Home";
 import { SkillSet } from "../../Config/Config";
 import { Experience, Education } from "../../Config/Config";
 import { FaUniversity, FaBriefcase } from "react-icons/fa";
@@ -13,7 +12,7 @@ function Resume() {
 
   return (
     <>
-      <Home />
+  
       <div className="card-inner">
         <div className="card-wrap">
         <div className="content resume">

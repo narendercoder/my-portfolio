@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Services } from "../../Config/Config";
-import Home from "../Home/Home";
 import "./About.scss";
 
 
@@ -15,7 +14,7 @@ function About() {
   });
   return (
     <>
-      <Home />
+      
       <div className="card-inner">
         <div className="card-wrap">
           <div className="content about">
@@ -28,8 +27,8 @@ function About() {
                 <div className="text-box">
                   <p>
                     <b>I'm</b>{" "} {new Date().getFullYear() <=2024 ? ` a ${new Date().getFullYear() - 2020}nd year B.tech student pursuing ` : "graduated"}
-                    Electrical and Electronics Engineering from Maharaja Agrasen Institute of Technology. By Profession, I'm a full-stack web developer. 
-                    I love the simple and minimalistic design and learning new things and technologies. 
+                    Electrical and Electronics Engineering from Maharaja Agrasen Institute of Technology. I like Doing coding and making web development related projects
+                    the simple and minimalistic design and I also love learning new things and technologies. 
                     I'm also a digital artist by passion.
                   </p>
                 </div>

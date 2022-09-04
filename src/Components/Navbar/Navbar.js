@@ -6,7 +6,6 @@ const Navbar = () => {
     <>
   <Header />
   <Outlet />
- 
   </>
   )
 }

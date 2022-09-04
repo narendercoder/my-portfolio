@@ -1,102 +1,111 @@
-import React, { useEffect, useState } from 'react';
-import "./Header.scss"
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import "./Header.scss";
+import { NavLink } from "react-router-dom";
 import { ImUser } from "react-icons/im";
 import { FaPhoneAlt } from "react-icons/fa";
-import { AiOutlineBars,AiOutlineClose } from 'react-icons/ai';
-import { IoIosBrush,IoMdListBox } from "react-icons/io";
-import { MdOutlineDarkMode,MdOutlineLightMode } from 'react-icons/md';
+import { AiOutlineBars, AiOutlineClose } from "react-icons/ai";
+import { IoIosBrush, IoMdListBox } from "react-icons/io";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 function Header() {
-  let [sidebar, setSidebar] = useState(false);
-  let [theme, setTheme] = useState(false);
+  let [sidebar, setSidebar] = useState(true);
+  let [theme, setTheme] = useState("light-theme");
+
   const toggleTheme = () => {
-    if(theme === false){
-     setTheme(true);
-     document.body.classList.remove("light-theme");
-     document.body.classList.add("dark-theme");
-    }
-    else{
-     setTheme(false);
-     document.body.classList.remove("dark-theme");
-     document.body.classList.add("light-theme");
-    }
- }
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
+  };
 
   const showSidebar = () => {
-    if(sidebar === false){
+    if (sidebar === false) {
       setSidebar(true);
       document.body.classList.add("sidebar-active");
-    }
-    else{
+    } else {
       setSidebar(false);
       document.body.classList.remove("sidebar-active");
     }
-  }
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   useEffect(()=>{
-    let active = [...document.querySelectorAll(".nav-link")];
-    active.map((child)=>{
-      
-      return child;
-    })
-  })
+    showSidebar();
+    // eslint-disable-next-line
+  },[]);
+  
   return (
-    <div className='header'>
-    <div className='menu-btn'>
-    <NavLink className="nav-link link"  to="/" >
-    <img src="logo.jpg" width="244" height="258" alt="logo" />
-    </NavLink>
-    <div className="toggle-btn">
-       <div className="toggle-theme">
-         <span className="link light icon" ><MdOutlineLightMode onClick={()=>toggleTheme()}/></span>
-        <span className="link dark icon" ><MdOutlineDarkMode onClick={()=>toggleTheme()}/></span>
-       </div>
-       <div className="toggle-header" onClick={()=>showSidebar()}>
-       {sidebar ?  <span className="link outline-close icon" ><AiOutlineClose/></span> 
-       :<span className="link outline-bars icon" ><AiOutlineBars /></span>}
-       </div>
-    </div>
-     
-    </div>
-      <div className='top-menu'>
-         <ul>
+    <div className="header">
+      <div className="menu-btn">
+        <NavLink className="nav-link link" to="/">
+          <img
+            src="logo.jpg"
+            width="244"
+            height="258"
+            alt="logo"
+            loading="lazy"
+          />
+        </NavLink>
+        <div className="toggle-btn">
+          <div className="toggle-theme">
+            <span className="link light icon">
+              <MdOutlineLightMode onClick={() => toggleTheme()} />
+            </span>
+            <span className="link dark icon">
+              <MdOutlineDarkMode onClick={() => toggleTheme()} />
+            </span>
+          </div>
+          <div className="toggle-header" onClick={() => showSidebar()}>
+            {sidebar ? (
+              <span className="link outline-close icon">
+                <AiOutlineClose />
+              </span>
+            ) : (
+              <span className="link outline-bars icon">
+                <AiOutlineBars />
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="top-menu">
+        <ul>
           <li>
-          <NavLink className="nav-link link"  to="/" >
-          <span className="icon">
-          <ImUser/>
-          </span>
-          <span className='link'>About</span>
-          </NavLink>
+            <NavLink className="nav-link link" to="/">
+              <span className="icon">
+                <ImUser />
+              </span>
+              <span className="link">About</span>
+            </NavLink>
           </li>
           <li>
-          <NavLink className="nav-link link" to="/resume">
-          <span className="icon">
-          <IoMdListBox/>
-          </span>
-          <span className='link'>Resume</span>
-          </NavLink>
+            <NavLink className="nav-link link" to="/resume">
+              <span className="icon">
+                <IoMdListBox />
+              </span>
+              <span className="link">Resume</span>
+            </NavLink>
           </li>
           <li>
-          <NavLink className="nav-link link" to="/portfolio">
-          <span className="icon">
-          <IoIosBrush/>
-          </span>
-          <span className='link'>works</span>
-          </NavLink>
+            <NavLink className="nav-link link" to="/portfolio">
+              <span className="icon">
+                <IoIosBrush />
+              </span>
+              <span className="link">works</span>
+            </NavLink>
           </li>
           <li>
-          <NavLink className="nav-link link" to="/contact">
-          <span className="icon">
-            <FaPhoneAlt/>
-          </span>
-          <span className='link'>contact</span>
-          </NavLink>
+            <NavLink className="nav-link link" to="/contact">
+              <span className="icon">
+                <FaPhoneAlt />
+              </span>
+              <span className="link">contact</span>
+            </NavLink>
           </li>
-         </ul>
+        </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

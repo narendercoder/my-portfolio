@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Home from "../Home/Home";
 import "./Contact.scss";
 import { FaTelegramPlane } from "react-icons/fa";
 
@@ -58,7 +57,6 @@ function Contact() {
   };
   return (
     <>
-      <Home />
       <section
         className="card-inner contacts"
         id="contacts-card"
@@ -81,6 +79,7 @@ function Contact() {
                       scrolling="no"
                       marginHeight="0"
                       marginWidth="0"
+                      loading="lazy"
                       src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=28.748839,%2077.191691+(kamal%20pur,%20Kamal%20vihar%20burari)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                     >
                       <a href="https://www.gps.ie/farm-gps/">GPS Navigation</a>

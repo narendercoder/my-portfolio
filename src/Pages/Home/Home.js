@@ -18,7 +18,7 @@ const Home = () => {
         <div className="profile">
           <div className="slide"></div>
           <div className="image">
-          <img src="profile(1).jpg" width="936" height="936" alt="profile" />
+          <img src="profile(1).jpg" width="936" height="936" alt="profile" loading="lazy" />
           </div>
           <div className="title">Narender Singh Bisht</div>
           <div className="subtitle subtitle-typed">
