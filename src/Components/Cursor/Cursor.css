@@ -1,0 +1,28 @@
+.cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  transition: transform 250ms ease-out;
+  z-index: 100;
+  opacity: 0.3;
+}
+
+.cursor.cursor-hover {
+  opacity: 1;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+@media (max-width: 1010px) {
+  .cursor {
+    display: none;
+  }
+}/*# sourceMappingURL=Cursor.css.map */

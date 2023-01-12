@@ -37,7 +37,7 @@ function Portfolio() {
         <div key={ind} className='col col-6 grid-item photo'>
           <div className='box-item'>
            <div className='image'>
-           <a href={val.href}>
+           <a href={val.href} aria-label={val.name}>
            <div className='icon-box'>
            <MdOutlineRemoveRedEye className='p-icon' aria-label="eye outline"/>
             </div>

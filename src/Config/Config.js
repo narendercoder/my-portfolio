@@ -91,49 +91,49 @@ export const ProjImg = [
         id: "1",
         name: "Pokemon-app",
         category: "react",
-        imgsrc: "projectImg/react/p_0.png",
+        imgsrc: "projectImg/react/p_0.jpg",
         href: "https://react-pokemon-app1.netlify.app/"
     },
     {
         id: "2",
         name: "Crypto-Tracker",
         category: "react",
-        imgsrc: "projectImg/react/p_1.png",
+        imgsrc: "projectImg/react/p_1.jpg",
         href: "https://crypto-tracker1.netlify.app/"
     },
     {
         id: "3",
         name: "Weather-app",
         category: "react",
-        imgsrc: "projectImg/react/p_2.png",
+        imgsrc: "projectImg/react/p_2.jpg",
         href: "https://narendercoder.github.io/weatherApp/"
     },
     {
         id: "4",
         name: "Snake Game",
         category: "js",
-        imgsrc: "projectImg/js/p_0.png",
+        imgsrc: "projectImg/js/p_0.jpg",
         href: "https://narendercoder.github.io/Snake-Game/"
     },
     {
         id: "5",
         name: "Spotify",
         category: "js",
-        imgsrc: "projectImg/js/p_1.png",
+        imgsrc: "projectImg/js/p_1.jpg",
         href: "https://narendercoder.github.io/Spotify/"
     },
     {
         id: "6",
         name: "Todolist",
         category: "react",
-        imgsrc: "projectImg/react/p_4.png",
+        imgsrc: "projectImg/react/p_4.jpg",
         href: "https://todolist82.netlify.app/"
     },
     {
         id: "7",
         name: "Tic-Tac-toe",
         category: "js",
-        imgsrc: "projectImg/js/p_2.png",
+        imgsrc: "projectImg/js/p_2.jpg",
         href: "https://narendercoder.github.io/Tic_Tac_Toe/"
     },
     ]

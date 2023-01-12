@@ -26,7 +26,7 @@ function About() {
               <div className="col col-6 border-line-v">
                 <div className="text-box">
                   <p>
-                    <b>I'm</b>{" "} {new Date().getFullYear() <=2024 ? ` a ${new Date().getFullYear() - 2020}nd year B.tech student pursuing ` : "graduated"}
+                    <b>I'm</b>{" "} {new Date().getFullYear() <=2024 ? ` a ${new Date().getFullYear() - 2020}${new Date().getFullYear() < 4 ? "th" : "rd" } year B.tech student pursuing ` : "graduated"}
                     Electrical and Electronics Engineering from Maharaja Agrasen Institute of Technology. I like Doing coding and making web development related projects
                     the simple and minimalistic design and I also love learning new things and technologies. 
                     I'm also a digital artist by passion.
