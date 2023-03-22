@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 
 AOS.init({
   once: true,
-  duration: 2000,
+  duration: 1000,
 });
 
 const Contact = React.lazy(() => import("./Pages/Contact"));
