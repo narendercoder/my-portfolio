@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 
 body.light-theme {
   .toggle-btn {
@@ -11,6 +14,17 @@ body.light-theme {
     }
   }
 }
+
+  body.dark-theme{
+    .content.services .row .col.col-6 .service-item {
+        .icon{
+            background-color: var(--highlight-secondary);
+        }
+        .name{
+            color: var(--title-clr-primary);
+        }
+    }
+  }
 
 body.dark-theme {
   color: rgba(255, 255, 255, 0.55);
@@ -241,7 +255,7 @@ body.dark-theme {
 
 .app {
   position: relative;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -328,7 +342,6 @@ input[type="submit"] {
 
 .card-inner {
   background-color: var(--bg-color-primary);
-  overflow: hidden;
   padding: 0;
   position: absolute;
   left: 560px;
@@ -743,3 +756,4 @@ a:hover {
       content:unset;
   }
 }
+`

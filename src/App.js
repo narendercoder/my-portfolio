@@ -1,12 +1,13 @@
-import "./App.scss";
-import React, {  Suspense, useEffect, useState } from "react";
-import { CircularProgress } from '@mui/material';
+import React, {  useEffect, useState } from "react";
 import Preloader from "./Components/Preloader/Preloader";
-const Cursor = React.lazy(()=>import("./Components/Cursor/Cursor"));
-const Content = React.lazy(()=>import("./Content"));
-const Particle = React.lazy(()=>import("./Components/Particle/Particle"));
+import { GlobalStyle } from "./GlobalStyle/Globalstyle";
+import Cursor from "./Components/Cursor";
+import Content from "./Content";
+import Particle from "./Components/Particle";
+
 
 function App() {
+
   const [loading, setLoading] = useState(false);
   useEffect(()=>{
     setLoading(true)
@@ -15,20 +16,23 @@ function App() {
     },3000)
   },[]);
 
+
+
   return (
     <>
+    <GlobalStyle/>
     {
       loading ? <Preloader />
       : <>
-      <Suspense fallback={<div><CircularProgress/></div>} >
      <Cursor />
     <div className="app">
       <Particle/>
       <Content />
     </div>
-    </Suspense>
+
     </>
     }
+
     </>
   );
 }

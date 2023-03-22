@@ -1,5 +1,30 @@
+import React from "react";
+import styled from "styled-components";
+
+const Footer = () => {
+  return (
+    <Wrapper>
+      <div className="section f-section">
+      <div className="f-container">
+        <div className="f-credits">
+          <p>
+           ©️ 2022 All rights reserved | designed with <span className="text-white">❤️</span> by Narender
+            Singh Bisht
+          </p>
+        </div>
+      </div>
+    </div>
+    </Wrapper>
+  );
+}
+export default Footer;
+
+const Wrapper = styled.footer`
+ position: relative;
+ width: 100vw;
+ height: auto;
+ bottom: 0;
 .f-section {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,3 +63,4 @@
     text-align: center;
    }
 }
+`
