@@ -156,6 +156,20 @@ export const ProjImg = [
         imgsrc: "projectImg/js/p_2.jpg",
         href: "https://narendercoder.github.io/Tic_Tac_Toe/"
     },
+    {
+        id: 8,
+        name: "E-talk",
+        category: "react",
+        imgsrc: "projectImg/react/p_5.png",
+        href: "https://e-talk.vercel.app/"
+    },
+    {
+        id: 8,
+        name: "E-commerce",
+        category: "react",
+        imgsrc: "projectImg/react/p_6.png",
+        href: "https://e-trade.netlify.app/"
+    }
     ]
 export const Experience=[
     

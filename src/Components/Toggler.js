@@ -9,7 +9,7 @@ const Toggler = () => {
     let [toggle, setToggle] = useState(isdarkMode);
   
     const toggleMode = () => {
-        toggleTheme();
+      toggleTheme();
       setToggle(!isdarkMode);
     };
   

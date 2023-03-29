@@ -4,6 +4,7 @@ import { Experience, Education } from "../Config/Config";
 import { FaUniversity, FaBriefcase } from "react-icons/fa";
 import styled from "styled-components";
 
+
 function Resume() {
   return (
     <Wrapper>
@@ -31,6 +32,7 @@ function Resume() {
                             ? `${"resume"}-${"item"} ${"active"} ${"border"}-${"line"}-${"h"}`
                             : `${"resume"}-${"item"} ${"border"}-${"line"}-${"h"}`
                         }
+                        data-aos="fade-up" data-aos-delay={(ind+1)*100}
                       >
                         <div className="date">{val.date}</div>
                         <div className="name">{val.name}</div>
@@ -63,6 +65,7 @@ function Resume() {
                             ? `${"resume"}-${"item"} ${"active"} ${"border"}-${"line"}-${"h"}`
                             : `${"resume"}-${"item"} ${"border"}-${"line"}-${"h"}`
                         }
+                        data-aos="fade-up" data-aos-delay={(ind+1)*100}
                       >
                         <div className="date">{val.date}</div>
                         <div className="name">{val.name}</div>
@@ -81,8 +84,7 @@ function Resume() {
             </div>
             <div className="row grid-items border-line-v">
               <ul className="grid-item">
-                {SkillSet &&
-                  SkillSet.map((val, ind) => (
+                {SkillSet && SkillSet.map((val, ind) => (
                     <li key={val.id}>
                       <div className="cards">
                         <div className="card-img">
@@ -113,7 +115,8 @@ export default Resume;
 const Wrapper = styled.section`
   .resume-items .resume-item.active .date {
     border: 1px solid var(--highlight-primary);
-    color: var(--highlight-primary);
+    color: ${({ theme }) => theme.highlight.primary};
+    border: 1px solid ${({ theme }) => theme.highlight.primary};
   }
 
   .resume-items .resume-item {
@@ -127,20 +130,20 @@ const Wrapper = styled.section`
       font-size: 0.8rem;
       line-height: 18px;
       font-weight: 400;
-      color: var(--lightgrey);
-      border: 1px solid var(--lightgrey);
+      color: ${({ theme }) => theme.highlight.secondary};
+      border: 1px solid ${({ theme }) => theme.highlight.secondary};
       border-radius: 4px;
     }
     .name {
       font-size: 1rem;
-      color: var(--black);
+      color: rgb(${({ theme }) => theme.title.primary});
       font-weight: 500;
       text-transform: none;
     }
     .company {
       margin: 0 0 11px 0;
       font-size: 0.8rem;
-      color: var(--grey);
+      color: rgb(${({ theme }) => theme.title.secondary});
       font-weight: 400;
       text-transform: none;
     }
@@ -152,6 +155,7 @@ const Wrapper = styled.section`
         padding-inline-start: 20px;
         li {
           list-style: disc;
+          color: rgb(${({ theme }) => theme.title.secondary});
         }
       }
     }
@@ -163,7 +167,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid var(--highlight-primary);
+    border: 1px solid ${({ theme }) => theme.highlight.primary};
     border-radius: 10px;
     cursor: pointer;
     &:after {

@@ -191,10 +191,10 @@ const Wrapper = styled.section`
     textarea,
     button {
       transition: all 0.3s ease 0s;
-      box-shadow: 5px 5px 10px rgba(120, 204, 109, 0.2);
+      box-shadow: 5px 5px 10px rgba(${({ theme }) => theme.highlight.rgb.primary}, 0.2);
     }
     .title {
-      color: var(--darkgrey);
+      color:  rgb(${({ theme }) => theme.title.primary});
 
       &:after {
         content: "";
@@ -204,7 +204,7 @@ const Wrapper = styled.section`
         right: 0;
         bottom: 0;
         width: auto;
-        background: var(--gradient3);
+        background:  ${({ theme }) => theme.border.gradient2};
       }
     }
 
@@ -227,9 +227,10 @@ const Wrapper = styled.section`
         }
 
         button {
-          box-shadow: 5px 5px 10px rgba(120, 204, 109, 0.2);
+          
+          box-shadow: 5px 5px 10px rgba(${({ theme }) => theme.highlight.rgb.primary}, 0.2);
           &:hover {
-            background: var(--highlight-primary);
+            background: ${({ theme }) => theme.highlight.primary};
             border: none;
             .icon {
               margin-left: 10px;

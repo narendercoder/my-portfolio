@@ -30,7 +30,7 @@ const Wrapper = styled.footer`
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-primary);
+    background-color: ${({ theme }) => theme.bg.primary};
     padding: 10px 0 10px 0;
     z-index: 1;
     font-size: 0.7rem;

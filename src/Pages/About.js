@@ -139,6 +139,7 @@ const Wrapper = styled.section`
         width: 50%;
         text-align: left;
         font-size: 0.8rem;
+        color: rgb(${({ theme }) => theme.title.secondary});
 
         &:first-child {
           padding-top: 0;
@@ -172,7 +173,7 @@ const Wrapper = styled.section`
             flex-grow: 1;
             text-align: left;
             font-size: 0.89rem;
-    
+            color: rgb(${({ theme }) => theme.title.secondary});
             &:first-child {
               padding-top: 0;
             }
@@ -209,7 +210,7 @@ const Wrapper = styled.section`
     .name {
       font-weight: 500;
       font-size: 1.06rem;
-      color: var(--title-clr-secondary);
+      color: rgb(${({ theme }) => theme.title.primary});
     }
     .icon {
       position: relative;
@@ -219,9 +220,9 @@ const Wrapper = styled.section`
       align-items: center;
       border-radius: 50%;
       justify-content: center;
-      background-color: var(--highlight-primary);
+      background-color: ${({ theme }) => theme.highlight.primary};
       font-size: 1.8rem;
-      color: var(--white);
+      color: ${({ theme }) => theme.colors.white};
     }
     .desc {
       p {

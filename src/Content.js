@@ -7,26 +7,33 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
 import ErrorPage from "./Pages/ErrorPage";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 AOS.init({
   once: true,
   duration: 1000,
+  offset: -200,
 });
 
 const Contact = React.lazy(() => import("./Pages/Contact"));
 
-function Content() {
+const Content = () =>{
+  
+
   return (
-    <BrowserRouter>
+
+     <BrowserRouter>
       <div className="container">
         <Suspense
           fallback={
             <>
-              <div className="spinner-border" style={{width: "3rem", height: "3rem"}} role="status">
-              </div>
+              <div
+                className="spinner-border"
+                style={{ width: "3rem", height: "3rem" }}
+                role="status"
+              ></div>
             </>
           }
         >
@@ -46,6 +53,7 @@ function Content() {
       </div>
       <Footer />
     </BrowserRouter>
+
   );
 }
 

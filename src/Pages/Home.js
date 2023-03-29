@@ -27,7 +27,11 @@ const Home = () => {
               loading="lazy"
             />
           </div>
-          <div className="title" data-aos="fade-up">Narender Singh Bisht</div>
+          <div className="title" data-aos="fade-up">
+          <h1>
+          Narender Singh Bisht
+          </h1>
+          </div>
           <div className="subtitle subtitle-typed">
             <TypeWriterEffect
               textStyle={{
@@ -153,12 +157,12 @@ const Wrapper = styled.section`
       top: -15px;
       width: 100%;
       height: 100%;
-      background: var(--gradient1);
+      background: ${({theme})=> theme.gradient.gradient1};
       border-radius: 4px;
     }
     .profile {
       padding: 50px;
-      background-color: var(--bg-color-primary);
+      background-color: ${({theme})=> theme.bg.primary};
       position: relative;
       left: 0%;
       width: 100%;
@@ -180,7 +184,7 @@ const Wrapper = styled.section`
         width: 100%;
         height: 52%;
         background-image: url("/assets/mountain.jpg");
-        background-color: var(--white);
+        background-color: ${({ theme }) => theme.colors.white};
         background-repeat: no-repeat;
         background-position: 50% 0%;
         background-size: cover;
@@ -188,7 +192,7 @@ const Wrapper = styled.section`
         &::before {
           content: "";
           position: absolute;
-          background-color: var(--white);
+          background-color: ${({ theme }) => theme.bg.primary};
           transform: rotate(12deg);
           left: -25%;
           bottom: -63%;
@@ -198,7 +202,7 @@ const Wrapper = styled.section`
         &::after {
           content: "";
           position: absolute;
-          background-color: var(--white);
+          background-color: ${({ theme }) => theme.bg.primary};;
           transform: rotate(-8deg);
           left: auto;
           right: -25%;
@@ -217,7 +221,7 @@ const Wrapper = styled.section`
           display: block;
           width: 100%;
           height: auto;
-          border: 3px solid var(--white);
+          border: 3px solid ${({ theme }) => theme.colors.white};
           border-radius: 50%;
         }
         &:before {
@@ -228,16 +232,17 @@ const Wrapper = styled.section`
           width: 100%;
           height: 100%;
           border-radius: 100%;
-          background-color: var(--highlight-primary);
+          background-color: rgb(${({ theme }) => theme.highlight.rgb.primary}, 0.5);
         }
       }
 
       .title {
         margin: 0 0 10px 0;
-        font-size: 2.1rem;
-        color: var(--title-clr-secondary);
-        line-height: 32px;
-        font-weight: 400;
+        h1{
+         line-height: 32px;
+         font-weight: 400;
+          font-size: 2.1rem;
+        }
       }
       .social {
         position: relative;
@@ -253,6 +258,7 @@ const Wrapper = styled.section`
           font-size: 1.1rem;
           display: inline-block;
           transition: all 0.2s linear;
+          color: rgb(${({ theme }) => theme.title.primary});
           &:before {
             content: none;
           }
@@ -262,11 +268,18 @@ const Wrapper = styled.section`
         position: relative;
         margin: 0;
         display: inline-block;
-        color: var(--mantis);
         font-size: 1rem;
         line-height: 20px;
         height: 20px;
         font-weight: 400;
+        .react-typewriter-text-wrap{
+      .react-typewriter-text{
+        color:   ${({ theme }) => theme.highlight.primary} !important;
+        .react-typewriter-pointer{
+          background-color:  ${({ theme }) => theme.highlight.primary} !important;
+        }
+      }
+       }
       }
       .links {
         position: absolute;
@@ -277,8 +290,9 @@ const Wrapper = styled.section`
         width: 100%;
         height: 70px;
         z-index: 10;
+        color: rgb(${({ theme }) => theme.title.primary});
         &:before {
-          background: var(--gradient2);
+          background: ${({ theme }) => theme.border.gradient1};
         }
         &:before {
           content: "";
@@ -294,7 +308,7 @@ const Wrapper = styled.section`
           }
 
           &:hover {
-            color: var(--highlight-primary);
+            color: ${({ theme }) => theme.highlight.primary};
           }
         }
       }
@@ -304,17 +318,17 @@ const Wrapper = styled.section`
     transform: translateY(-3px);
   }
   .card-section .profile .social a:nth-child(2):hover {
-    color: var(--fandango);
+    color: ${({ theme }) => theme.colors.fandango};
   }
   .card-section .profile .social a:nth-child(1):hover,
   .card-section .profile .social a:nth-child(3):hover {
-    color: var(--chambreyblue);
+    color: ${({ theme }) => theme.colors.chambreyblue};
   }
   .card-section .profile .social a:nth-child(4):hover {
-    color: var(--deepskyblue);
+    color: ${({ theme }) => theme.colors.deepskyblue};
   }
   .card-section .profile .social a:nth-child(5):hover {
-    color: var(--black);
+    color: ${({ theme }) => theme.colors.black};
   }
   .links .d-icon {
     font-size: large;

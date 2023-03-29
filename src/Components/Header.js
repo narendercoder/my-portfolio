@@ -131,12 +131,12 @@ const Wrapper = styled.section`
         li {
           .nav-link {
             color: rgba(255, 255, 255, 0.85) !important;
-            background: var(--bg-color-primary);
+            background: ${({ theme }) => theme.bg.primary};
           }
           .nav-link.active {
             .icon,
             .link {
-              color: var(--highlight-primary);
+              color: ${({ theme }) => theme.highlight.primary};
             }
           }
           a:before {
@@ -180,7 +180,7 @@ const Wrapper = styled.section`
 
           &:hover .icon,
           &:hover .link {
-            color: var(--highlight-primary);
+            color: ${({ theme }) => theme.highlight.primary};
           }
           .link {
             position: relative;
@@ -193,7 +193,7 @@ const Wrapper = styled.section`
             font-size: 0.69rem;
             font-weight: 500;
             text-transform: uppercase;
-            color: var(--black);
+            color: rgb(${({ theme }) => theme.title.primary});
             transition: all 0.2s ease-in;
             &:before {
               content: normal;
@@ -211,7 +211,7 @@ const Wrapper = styled.section`
             width: 40px;
             height: 30px;
             font-size: 1.25rem;
-            color: var(--icon-color-secondary);
+            color: rgb(${({ theme }) => theme.title.secondary});
             line-height: 30px;
             transition: all 0.2s ease-in;
           }
@@ -282,6 +282,7 @@ const Wrapper = styled.section`
       font-size: 2rem;
       align-items: center;
       justify-content: flex-end;
+      color: rgb(${({ theme }) => theme.title.primary});
 
       &::before {
         content: normal;

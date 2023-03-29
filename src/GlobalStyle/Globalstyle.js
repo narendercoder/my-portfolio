@@ -2,7 +2,85 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-body.light-theme {
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.25);
+}
+::-webkit-scrollbar-thumb {
+    /* background-color: rgba(0,0,0,0.5); */
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: none; */
+    background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  color: rgb(${({ theme }) => theme.title.primary});
+  ${'' /* color: #323232; */}
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+.h-title {
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8em;
+  padding: 0;
+  margin: 0 0 25px 0;
+  color: rgb(${({ theme }) => theme.title.secondary})
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: rgb(${({ theme }) => theme.title.primary});
+  text-decoration: none;
+}
+span{
+  color:  ${({ theme }) => theme.title.primary};
+}
+
+
+${'' /* body.light-theme {
   .toggle-btn {
     .toggle-theme .light,
     .toggle-theme .dark {
@@ -163,9 +241,7 @@ body.dark-theme {
       color: var(--white);
 
       &:before {
-        background: radial-gradient(ellipse at top,
-            rgba(197, 202, 213, 0.15) 0%,
-            rgba(255, 255, 255, 0) 70%);
+        background: 
       }
     }
 
@@ -235,21 +311,18 @@ body.dark-theme {
       }
     }
 
-    .border-line-h:after {
-      background: radial-gradient(ellipse at left,
-          rgba(197, 202, 213, 0.15) 0%,
-          rgba(255, 255, 255, 0) 70%);
-    }
-
-    .border-line-v:before {
-      background: radial-gradient(ellipse at top,
-          rgba(197, 202, 213, 0.15) 0%,
-          rgba(255, 255, 255, 0) 70%);
-    }
+  
 
     .f-section {
       background: var(--bg-color-secondary);
     }
+  }
+} */}
+
+.card-section{
+  &::after{
+    background: rgb(49, 49, 58);
+    opacity: 0.3;
   }
 }
 
@@ -262,9 +335,31 @@ body.dark-theme {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  background: var(--bg-gradient);
+  background: ${({ theme }) => theme.gradient.bgGradient};
   transition: all 0.5s;
+
+  .content .title {
+      color: ${({ theme }) => theme.title.primary};;
+
+      &:after {
+        background: ${({ theme }) => theme.border.gradient2};
+      }
+
+      &:first-letter,
+      .first-word {
+        color: ${({ theme }) => theme.highlight.primary} !important;
+      }
+    }
+
 }
+
+.border-line-h:after {
+      background: ${({ theme }) => theme.border.gradient2}
+    }
+
+    .border-line-v:before {
+      background: ${({ theme }) => theme.border.gradient1}
+    }
 
 .container {
   margin: 8vh 6vw;
@@ -291,7 +386,7 @@ body.dark-theme {
   height: 70px;
   line-height: 70px;
   font-size: 0.75rem;
-  color: var(--black);
+  color: ${({ theme }) => theme.title.secondary};
   font-weight: 500;
   text-align: center;
   text-decoration: none;
@@ -305,7 +400,7 @@ input[type="submit"] {
   display: block;
   width: 100%;
   font-size: 0.875rem;
-  color: var(--darkgrey);
+  color: ${({ theme }) => theme.title.secondary};
 }
 .content {
   position: relative;
@@ -320,14 +415,14 @@ input[type="submit"] {
     min-height: 51px;
     font-weight: 600;
     z-index: 2;
-    color: var(--black);
+    color: rgb(${({ theme }) => theme.title.primary});
 
     &:after {
       content: "";
       position: absolute;
       width: auto;
       height: 1px;
-      background: var(--gradient3);
+      background: ${({ theme }) => theme.gradient.gradient3};
     }
 
     &:after {
@@ -341,7 +436,7 @@ input[type="submit"] {
 }
 
 .card-inner {
-  background-color: var(--bg-color-primary);
+  background-color: ${({ theme }) => theme.bg.primary};
   padding: 0;
   position: absolute;
   left: 560px;
@@ -357,7 +452,7 @@ input[type="submit"] {
 
   &:before,
   &:after {
-    background: var(--bg-color-primary);
+    background: ${({ theme }) => theme.bg.primary};
   }
 
   &:before,
@@ -373,7 +468,7 @@ input[type="submit"] {
     left: 0;
     right: 20px;
     height: 20px;
-    background: var(--bg-color-primary);
+    background: ${({ theme }) => theme.bg.primary};
     z-index: 10;
   }
 
@@ -433,7 +528,7 @@ input[type="submit"] {
 
 .resume-title .name {
   line-height: 14px;
-  color: var(--darkgrey);
+  color: rgb(${({ theme }) => theme.title.primary});
   font-size: 1.06rem;
   font-weight: 500;
 }
@@ -441,9 +536,7 @@ input[type="submit"] {
 .resume-title{
   padding: 0 0 30px 0;
 
- .name {
-  color: rgba(0, 0, 0, 0.85);
-}
+
 
  .name {
   margin: 0 0 0 10px;
@@ -461,7 +554,7 @@ input[type="submit"] {
   width: 40px;
   height: 40px;
   font-size: 2rem;
-  color: var(--highlight-primary);
+  color: ${({ theme }) => theme.highlight.primary};
 }
 }
 
@@ -482,7 +575,7 @@ input[type="submit"] {
   bottom: 0;
   width: 100%;
   height: 1px;
-  background: var(--gradient3);
+  background: ${({ theme }) => theme.gradient.gradient3};
 }
 
 .border-line-v:before {
@@ -492,9 +585,7 @@ input[type="submit"] {
   top: 0;
   width: 1px;
   height: 100%;
-  background: radial-gradient(ellipse at top,
-      rgba(197, 202, 213, 0.7) 0%,
-      rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(ellipse at top,  rgba(197, 202, 213, 0.7) 0%,  rgba(255, 255, 255, 0) 70%);
 }
 .row .col.border-line-v:first-child:before {
   display: none;
@@ -518,9 +609,7 @@ ul {
 }
 
 .link:before {
-  background: radial-gradient(ellipse at top,
-      #dddddd 0%,
-      rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(ellipse at top,  #dddddd 0%,  rgba(255, 255, 255, 0) 70%);
 }
 
 .link:before {
@@ -534,7 +623,7 @@ ul {
 
 .content .title .first-word,
 .content .title:first-letter {
-  color: var(--highlight-primary) !important;
+  color: ${({ theme }) => theme.highlight.primary} !important;
 }
 
 input,
@@ -549,7 +638,7 @@ button {
   height: 60px;
   background: none;
   border: none;
-  border-bottom: 1px solid var(--highlight-primary);
+  border-bottom: 1px solid ${({ theme }) => theme.highlight.primary};
   border-radius: 0px;
   appearance: none;
   outline: none;
@@ -563,7 +652,7 @@ button {
   width: auto;
   height: 50px;
   line-height: 50px;
-  border: 1px solid var(--highlight-primary);
+  border: 1px solid ${({ theme }) => theme.highlight.primary};
   border-radius: 4px;
 }
 
@@ -574,13 +663,13 @@ input[type="submit"] {
   padding: 0 15px;
   font-size: 1rem;
   height: 50px;
-  color: var(--darkgrey);
+  color:  rgb(${({ theme }) => theme.title.primary});
 }
 
 input:focus,
 textarea:focus {
-  color: var(--darkgrey);
-  border-bottom: 2px solid var(--highlight-primary);
+  color:  rgb(${({ theme }) => theme.title.primary});
+  border-bottom: 2px solid ${({ theme }) => theme.highlight.primary};
 }
 
 textarea {
@@ -676,6 +765,7 @@ col {
       padding-top: 50px;
       min-height: 560px;
       height: calc(100vh - 102px);
+       
 
       .slide {
         height: 55%;
@@ -702,7 +792,7 @@ col {
 
 
 a:hover {
-  color: var(--highlight-primary);
+  color: ${({ theme }) => theme.highlight.primary};
 }
 
 .row .col {
