@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Portfolio from "./Pages/Portfolio";
@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import ErrorPage from "./Pages/ErrorPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Contact from "./Pages/Contact";
 
 
 AOS.init({
@@ -17,7 +18,6 @@ AOS.init({
   offset: -200,
 });
 
-const Contact = React.lazy(() => import("./Pages/Contact"));
 
 const Content = () =>{
   
@@ -26,17 +26,7 @@ const Content = () =>{
 
      <BrowserRouter>
       <div className="container">
-        <Suspense
-          fallback={
-            <>
-              <div
-                className="spinner-border"
-                style={{ width: "3rem", height: "3rem" }}
-                role="status"
-              ></div>
-            </>
-          }
-        >
+        <>
           <Routes>
             <Route path="/" element={<Navbar />}>
               <Route path="/" element={<Home />}>
@@ -49,7 +39,7 @@ const Content = () =>{
             </Route>
             <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </Suspense>
+        </>
       </div>
       <Footer />
     </BrowserRouter>
