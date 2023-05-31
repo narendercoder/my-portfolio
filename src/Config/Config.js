@@ -126,7 +126,7 @@ export const ProjImg = [
         name: "Weather-app",
         category: "react",
         imgsrc: "projectImg/react/p_2.jpg",
-        href: "https://narendercoder.github.io/weatherApp/"
+        href: "https://weather-app-132.netlify.app/"
     },
     {
         id: 4,
