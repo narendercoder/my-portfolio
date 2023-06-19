@@ -234,8 +234,17 @@ const Wrapper = styled.section`
     transform: translateY(0px);
    }
    .menu-btn{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
+    &:after{
+      content: "";
+      position: absolute;
+      background-image: ${({ theme }) => theme.border.gradient1};
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      z-index: 99;
+    }
    }
 
    .toggle-header{
