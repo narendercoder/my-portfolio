@@ -233,6 +233,10 @@ const Wrapper = styled.section`
    .top-menu{
     transform: translateY(0px);
    }
+   .menu-btn{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+   }
 
    .toggle-header{
        .outline-close{
@@ -307,6 +311,7 @@ const Wrapper = styled.section`
       width: 100%;
       align-items: center;
       justify-content: center;
+      
 
       .menu-btn {
         margin-bottom: 0px;
@@ -318,10 +323,11 @@ const Wrapper = styled.section`
         overflow: hidden;
         height: 50px;
         text-align: center;
-        background: var(--bg-color-primary);
+        background: ${({ theme }) => theme.bg.primary};
         border-radius: 0px;
         z-index: 2;
-        padding-right: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         .toggle-btn {
           position: relative;
         }
