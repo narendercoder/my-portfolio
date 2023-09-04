@@ -284,6 +284,7 @@ const Wrapper = styled.section`
     height: 40px;
     z-index: 80;
     transition: all 0.3s linear;
+    cursor: pointer;
     .toggle-theme {
       margin-right: 20px;
     }
