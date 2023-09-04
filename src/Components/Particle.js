@@ -3,12 +3,12 @@ import { loadFull } from "tsparticles";
 const Particles = React.lazy(()=>import("react-tsparticles"));
 function Particle() {
     const particlesInit = async (main) => {
-        console.log(main);
+        // console.log(main);
         await loadFull(main);
       };
     
       const particlesLoaded = (container) => {
-        console.log(container);
+        // console.log(container);
       };
   return (
     <div className="particles">

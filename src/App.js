@@ -11,7 +11,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   const { isdarkMode } = useGlobalContext();
-  console.log(isdarkMode);
+  // console.log(isdarkMode);
 
   const lightTheme = {
     colors: {

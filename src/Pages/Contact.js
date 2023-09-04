@@ -4,8 +4,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 import styled from "styled-components";
 
 function Contact() {
-  const [loading, setLoading] = useState(true);
-  console.log(loading)
+
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
@@ -25,8 +24,7 @@ function Contact() {
     event.preventDefault();
     const { firstName, lastName, email, address, message } = userData;
     if (firstName && lastName && email && address && message) {
-      const res = fetch(
-        `${process.env.REACT_FIREBASE_CONNECTION }`,
+      const res = fetch("https://my-portfolio-9090c-default-rtdb.firebaseio.com/userDataRecords.json",
         {
           method: "POST",
           headers: {
@@ -80,7 +78,7 @@ function Contact() {
                           marginHeight="0"
                           marginWidth="0"
                           loading="lazy"
-                          onLoad={()=>setLoading(false)}
+                          // onLoad={()=>setLoading(false)}
                           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=28.748839,%2077.191691+(kamal%20pur,%20Kamal%20vihar%20burari)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                         >
                           <a href="https://www.gps.ie/farm-gps/">
