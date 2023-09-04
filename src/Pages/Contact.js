@@ -26,7 +26,7 @@ function Contact() {
     const { firstName, lastName, email, address, message } = userData;
     if (firstName && lastName && email && address && message) {
       const res = fetch(
-        "https://my-portfolio-9090c-default-rtdb.firebaseio.com/userDataRecords.json",
+        `${process.env.REACT_FIREBASE_CONNECTION }`,
         {
           method: "POST",
           headers: {
