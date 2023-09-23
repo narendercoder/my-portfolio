@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "./Contact.scss";
 import { FaTelegramPlane } from "react-icons/fa";
 import styled from "styled-components";
 

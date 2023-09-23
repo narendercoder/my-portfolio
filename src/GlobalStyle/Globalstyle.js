@@ -468,7 +468,6 @@ input[type="submit"] {
     left: 0;
     right: 20px;
     height: 20px;
-    background: ${({ theme }) => theme.bg.primary};
     z-index: 10;
   }
 
@@ -626,7 +625,7 @@ ul {
   color: ${({ theme }) => theme.highlight.primary} !important;
 }
 
-input,
+input[type="text"] ,
 textarea,
 button {
   margin: 0;
@@ -656,7 +655,7 @@ button {
   border-radius: 4px;
 }
 
-input,
+input[type="text"] ,
 textarea,
 button,
 input[type="submit"] {

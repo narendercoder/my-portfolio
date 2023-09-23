@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="f-container">
         <div className="f-credits">
           <p>
-           ©️ 2022 All rights reserved | designed with <span className="text-white">❤️</span> by Narender
-            Singh Bisht
+           ©️ 2022 All rights reserved | designed with <span className="text-white">❤️</span> by <span className="highlight">Narender
+            Singh Bisht</span>
           </p>
         </div>
       </div>
@@ -36,6 +36,11 @@ const Wrapper = styled.footer`
     font-size: 0.7rem;
     p {
         font-size: 0.8rem;
+
+        .highlight{
+          color: ${({ theme }) => theme.highlight.primary};
+        }
+        
     }
     .f-credits {
         width: 100%;
@@ -43,7 +48,6 @@ const Wrapper = styled.footer`
         p {
             margin: 0;
             padding-bottom: 2px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
     }
 }

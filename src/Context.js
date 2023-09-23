@@ -15,9 +15,6 @@ const AppProvider = ({ children }) => {
     return dispatch({type: "TOGGLE_THEME"})
 }
 
-
-
-
   return <AppContext.Provider value={{...state, toggleTheme}}>{children}</AppContext.Provider>;
 };
 

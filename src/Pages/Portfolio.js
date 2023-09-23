@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import styled from "styled-components";
-// import "./Portfolio.scss";
 import { ProjImg } from "../Config/Config";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -196,6 +195,8 @@ const Wrapper = styled.section`
           position: relative;
           overflow: hidden;
           border-radius: 4px;
+          width: 180px;
+          height: 146px;
 
           a {
             display: initial;
@@ -203,7 +204,7 @@ const Wrapper = styled.section`
             img {
               position: relative;
               width: 100%;
-              height: auto;
+              height: 100%;
               transition: all 0.5s;
             }
           }

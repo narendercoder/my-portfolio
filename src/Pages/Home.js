@@ -1,6 +1,5 @@
 import React from "react";
 import TypeWriterEffect from "react-typewriter-effect";
-// import "./Home.scss";
 import { Link, Outlet } from "react-router-dom";
 import {
   FaFacebook,

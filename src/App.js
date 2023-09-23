@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Preloader from "./Components/Preloader/Preloader";
+import Preloader from "./Components/Preloader";
 import { GlobalStyle } from "./GlobalStyle/Globalstyle";
 import Cursor from "./Components/Cursor";
 import Content from "./Content";
@@ -89,7 +89,7 @@ const App = () => {
     },
     gradient: {
       bgGradient: "linear-gradient(to bottom right, #17171b 0%, #28282f 100%)",
-      gradient1:"linear-gradient(135deg,  rgba(49, 49, 58, 1) 0%,  rgba(49, 49, 58, 1) 100%)",
+      gradient1:"linear-gradient(135deg,  rgba(23, 23, 27, 1) 0%,  rgba(49, 49, 58, 1) 100%)",
       gradient2:"radial-gradient(ellipse at left,  #dddddd 0%,  rgba(255, 255, 255, 0) 70%)",
     },
     border:{
