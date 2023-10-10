@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import { MdOutlineRemoveRedEye } from "react-icons/md";
+
 import styled from "styled-components";
 import { ProjImg } from "../Config/Config";
 import { AnimatePresence, motion } from "framer-motion";
+import Works from "../Components/Works";
 
 const Portfolio = () => {
   const [items, setitems] = useState(ProjImg);
 
   const filterItem = (categItem) => {
     if (categItem === "all") {
-      document.querySelector(".p-btn").classList.add("active");
       setitems(ProjImg);
     } else {
-      document.querySelector(".p-btn").classList.remove("active");
       const updatedItems = ProjImg.filter((curElem) => {
         return curElem.category === categItem;
       });
-      const result = updatedItems.sort(function(a, b){
+      const result = updatedItems.sort(function (a, b) {
         const nameA = a.name.toUpperCase();
-        const nameB= b.name.toUpperCase();
+        const nameB = b.name.toUpperCase();
         if (nameA > nameB) {
           return 1;
         }
@@ -26,7 +25,7 @@ const Portfolio = () => {
           return -1;
         }
         return 0;
-      })
+      });
       setitems(result);
     }
   };
@@ -66,46 +65,10 @@ const Portfolio = () => {
               Javascript
             </button>
           </div>
-          <motion.div layout className="grid-items border-line-v">
+          <motion.div layout className="grid-items">
             <AnimatePresence>
               {items &&
-                items.map((val, ind) => (
-                  <motion.div
-                    animate={{ opacity: 1 }}
-                    initial={{ opacity: 0 }}
-                    exit={{ opacity: 0 }}
-                    layout
-                    key={ind}
-                    className="grid-item photo"
-                  >
-                    <div className="box-item">
-                      <div className="image">
-                        <a href={val.href} aria-label={val.name}>
-                          <div className="icon-box">
-                            <MdOutlineRemoveRedEye
-                              className="p-icon"
-                              aria-label="eye outline"
-                            />
-                          </div>
-                        </a>
-                        <a href={val.href} className="link">
-                          <img
-                            src={val.imgsrc}
-                            width="100"
-                            height="100"
-                            alt="img"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                      <div className="desc title">
-                        <a href={val.href} className="link name">
-                          {val.name}
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+                items.map((item) => <Works key={item.id} item={item} />)}
             </AnimatePresence>
           </motion.div>
         </div>
@@ -117,14 +80,19 @@ const Portfolio = () => {
 export default Portfolio;
 
 const Wrapper = styled.section`
-   .card-wrap{
-      overflow: hidden;
-      padding-bottom: 30px;
-   }
-   .content{
+  .card-wrap {
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+  .content {
     margin: 0px 0px 10px;
-   }
-  .box-item .image .info:before { background: linear-gradient(135deg,rgba(120, 204, 109, 0.5) 0%,  rgba(120, 204, 109, 0.01) 100%);
+  }
+  .box-item .image .info:before {
+    background: linear-gradient(
+      135deg,
+      rgba(120, 204, 109, 0.5) 0%,
+      rgba(120, 204, 109, 0.01) 100%
+    );
   }
 
   .box-item .image .info:before {
@@ -167,6 +135,9 @@ const Wrapper = styled.section`
         &:hover {
           img {
             transform: scale(1.2);
+          }
+          a{
+            color: ${({ theme }) => theme.highlight.primary};
           }
           .icon-box {
             display: inline;
@@ -229,22 +200,32 @@ const Wrapper = styled.section`
       }
     }
   }
-  .p-btns{
+  .p-btns {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
   }
-  .p-btn.active {
-    text-decoration: underline;
-  }
+
   .p-btn {
     width: auto;
     border: none;
+    margin-right: 1rem;
+    padding: 0;
+    height: 100%;
+    border-radius: 0;
     color: rgb(${({ theme }) => theme.title.primary});
+    border-bottom: 1px solid transparent;
+  }
+  .p-btn.active {
+    border-bottom: 1px solid ${({ theme }) => theme.highlight.primary};
+    color: ${({ theme }) => theme.highlight.primary};
   }
   .p-btn:hover,
   .p-btn:focus {
-    text-decoration: underline;
+    border-radius: 0;
+    border-bottom: 1px solid ${({ theme }) => theme.highlight.primary};
     box-shadow: none !important;
+    color: ${({ theme }) => theme.highlight.primary};
   }
 `;

@@ -115,63 +115,63 @@ export const ProjImg = [
         href: "https://bhagavad-gita-gyan.vercel.app/"
     },
     {
-        id: "1",
+        id: "2",
         name: "Pokemon-app",
         category: "react",
         imgsrc: "projectImg/react/p_0.jpg",
         href: "https://react-pokemon-app1.netlify.app/"
     },
     {
-        id: "2",
+        id: "3",
         name: "Crypto-Tracker",
         category: "react",
         imgsrc: "projectImg/react/p_1.jpg",
         href: "https://crypto-tracker1.netlify.app/"
     },
     {
-        id: "3",
+        id: "4",
         name: "Weather-app",
         category: "react",
         imgsrc: "projectImg/react/p_2.jpg",
         href: "https://weather-app-132.netlify.app/"
     },
     {
-        id: "4",
+        id: "5",
         name: "Snake Game",
         category: "js",
         imgsrc: "projectImg/js/p_0.jpg",
         href: "https://narendercoder.github.io/Snake-Game/"
     },
     {
-        id: "5",
+        id: "6",
         name: "Spotify",
         category: "js",
         imgsrc: "projectImg/js/p_1.jpg",
         href: "https://narendercoder.github.io/Spotify/"
     },
     {
-        id: "6",
+        id: "7",
         name: "Todolist",
         category: "react",
         imgsrc: "projectImg/react/p_4.jpg",
         href: "https://todolist82.netlify.app/"
     },
     {
-        id: "7",
+        id: "8",
         name: "Tic-Tac-toe",
         category: "js",
         imgsrc: "projectImg/js/p_2.jpg",
         href: "https://narendercoder.github.io/Tic_Tac_Toe/"
     },
     {
-        id: "8",
+        id: "9",
         name: "E-talk",
         category: "react",
         imgsrc: "projectImg/react/p_5.png",
         href: "https://e-talk.vercel.app/"
     },
     {
-        id: "8",
+        id: "10",
         name: "E-commerce",
         category: "react",
         imgsrc: "projectImg/react/p_6.png",
