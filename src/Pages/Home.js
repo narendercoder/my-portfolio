@@ -302,6 +302,9 @@ const Wrapper = styled.section`
           height: 1px;
         }
         .link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           &::before {
             content: normal;
           }

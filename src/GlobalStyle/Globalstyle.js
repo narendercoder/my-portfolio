@@ -80,244 +80,13 @@ span{
 }
 
 
-${'' /* body.light-theme {
-  .toggle-btn {
-    .toggle-theme .light,
-    .toggle-theme .dark {
-      color: var(--icon-color-secondary);
-    }
-
-    .toggle-theme .light {
-      display: none;
-    }
-  }
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: calc(100vh - 45px);
 }
-
-  body.dark-theme{
-    .content.services .row .col.col-6 .service-item {
-        .icon{
-            background-color: var(--highlight-secondary);
-        }
-        .name{
-            color: var(--title-clr-primary);
-        }
-    }
-  }
-
-body.dark-theme {
-  color: rgba(255, 255, 255, 0.55);
-
-  .toggle-btn {
-
-    .toggle-theme .light,
-    .toggle-theme .dark,
-    .toggle-header .outline-bars,
-    .toggle-header .outline-close{
-      color: var(--icon-color-primary);
-    }
-
-    .toggle-theme .dark {
-      display: none;
-    }
-  }
-
-  .cursor {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-
-  .cursor.cursor-hover {
-    background-color: transparent;
-    border: 1px solid rgb(255, 255, 255);
-  }
-
-  .app {
-    background: var(--darkgradient);
-
-    a:hover {
-      color: var(--highlight-secondary);
-    }
-     .profile .react-typewriter-text-wrap{
-      .react-typewriter-text{
-        color: #ff9800 !important;
-        .react-typewriter-pointer{
-          background-color: #ff9800 !important;
-        }
-      }
-      
-     } 
-    .cursor.cursor-hover {
-      border: 1px solid rgb(255, 255, 255);
-    }
-
-    .cards {
-      border-color: var(--highlight-secondary);
-    }
-
-    .card-section:after {
-      background: #31313a;
-      opacity: 0.3;
-    }
-
-    .header {
-      @media (max-width: 560px) {
-        .menu-btn {
-          background: var(--bg-color-secondary);
-        }
-      }
-
-      .top-menu ul li {
-        .nav-link.active {
-
-          .link,
-          .icon {
-            color: var(--highlight-secondary);
-          }
-        }
-
-        .nav-link {
-          background: var(--bg-color-secondary);
-
-          &:hover .icon,
-          &:hover .link{
-              color: var(--highlight-secondary);
-          }
-        }
-
-        .icon,
-        .link {
-          color: var(--white);
-        }
-      }
-    }
-
-    .resume-items .resume-item .name {
-      color: var(--title-clr-primary);
-    }
-
-    .resume-items .resume-item .date {
-      color: #666;
-      border-color: #666;
-    }
-
-    .resume-title .name {
-      color: var(--title-clr-primary);
-    }
-
-    .resume-title .icon{
-      color: var(--highlight-secondary);
-    }
-
-    .resume-items .resume-item.active .date {
-      border: 1px solid var(--highlight-secondary);
-      color: var(--highlight-secondary);
-    }
-
-    .content input,
-    .content textarea,
-    .content button {
-      box-shadow: none;
-    }
-    .content .row button{
-        box-shadow:  5px 5px 10px rgba(255, 152, 0,0.2);
-        &:hover{
-          background-color: var(--highlight-secondary);
-        }
-      }
-    input,
-    textarea,
-    button,
-    input[type="submit"] {
-      color: var(--title-clr-primary);
-      border-color: var(--highlight-secondary);
-    }
-
-    input:focus,
-    textarea:focus,
-    button:focus {
-      border-color: var(--highlight-secondary);
-    }
-
-    .link {
-      color: var(--white);
-
-      &:before {
-        background: 
-      }
-    }
-
-    .content .title {
-      color: var(--white);
-
-      &:after {
-        background: radial-gradient(ellipse at left,
-            rgba(197, 202, 213, 0.15) 0%,
-            rgba(255, 255, 255, 0) 70%);
-      }
-
-      &:first-letter,
-      .first-word {
-        color: var(--highlight-secondary) !important;
-      }
-    }
-
-    .card-section {
-      .profile {
-        background: var(--bg-color-secondary);
-
-        .slide {
-
-          &::before,
-          &::after {
-            background-color: var(--bg-color-secondary);
-          }
-        }
-
-        .image {
-          &:before {
-            background: linear-gradient(135deg,
-                rgba(255, 152, 0, 0.4) 0%,
-                rgba(255, 152, 0, 0.01) 100%);
-          }
-
-          img {
-            border-color: var(--bg-color-secondary);
-          }
-        }
-
-        .links:before {
-          background: radial-gradient(ellipse at left,
-              rgba(197, 202, 213, 0.15) 0%,
-              rgba(255, 255, 255, 0) 70%);
-        }
-
-        .title {
-          color: var(--title-clr-primary);
-        }
-
-        .link {
-          &:hover {
-            color: var(--highlight-secondary);
-          }
-        }
-      }
-    }
-
-    .card-inner {
-      background: var(--bg-color-secondary);
-
-      &:before,
-      &:after {
-        background: var(--bg-color-secondary);
-      }
-    }
-
-  
-
-    .f-section {
-      background: var(--bg-color-secondary);
-    }
-  }
-} */}
 
 .card-section{
   &::after{
@@ -384,7 +153,6 @@ body.dark-theme {
 .button {
   position: relative;
   height: 70px;
-  line-height: 70px;
   font-size: 0.75rem;
   color: ${({ theme }) => theme.title.secondary};
   font-weight: 500;
@@ -638,7 +406,7 @@ button {
   margin: 0;
   padding: 0;
   display: block;
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
   width: 100%;
   height: 60px;

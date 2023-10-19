@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   padding: 0;
@@ -6,39 +6,6 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  --black: black;
-  --white: white;
-  --bg-color-primary: white;
-  --bg-color-secondary: #31313a;
-  --deepskyblue: deepskyblue;
-  --fandango: #b53389;
-  --chambreyblue: #3a559f;
-  --highlight-primary: #78cc6d;
-  --highlight-secondary: #ff9800;
-  --title-clr-primary: rgba(255, 255, 255, 0.85);
-  --title-clr-secondary: black;
-  --icon-color-primary: white;
-  --icon-color-secondary: #323232;
-  --gold: gold;
-  --bg-gradient: linear-gradient(to bottom right, #50a3a2 0%, #78cc6d 100%);
-  --gradient1: linear-gradient(135deg,
-      rgba(120, 204, 109, 0.4) 0%,
-      rgba(120, 204, 109, 0.012) 100%);
-  --gradient2: radial-gradient(ellipse at center,
-      #dddddd 0%,
-      rgba(255, 255, 255, 0) 70%);
-  --gradient3: radial-gradient(ellipse at left,
-      #dddddd 0%,
-      rgba(255, 255, 255, 0) 70%);
-  --darkgradient: linear-gradient(to bottom right, #17171b 0%, #28282f 100%);
-  --link-clr-primary: rgba(255, 255, 255, 0.85);
-  --link-clr-secondary: #323232;
-  --darkgrey: #323232;
-  --grey: #999999;
-  --lightgrey: #cccccc;
-  --varylightgrey: #eeeeee;
-} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -52,7 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   scroll-behavior: smooth;
 }

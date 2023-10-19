@@ -12,7 +12,7 @@ function Particle() {
   //     // console.log(container);
   //   };
   return (
-    <Wrapper className="background gradient">
+    <Wrapper className="background gradient h-screen">
       {/* <Particles
           id="tsparticles"
           init={particlesInit}
@@ -99,7 +99,7 @@ const Wrapper = styled.div`
     display: block;
     width: 80px;
     height: 80px;
-    bottom: -320px;
+    bottom: -300px;
     animation: square 50s infinite linear;
     border-radius: 4px;
     &:first-child {

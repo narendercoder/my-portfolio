@@ -113,7 +113,7 @@ const App = () => {
       ) : (
         <>
           <Cursor />
-          <div className={isdarkMode ? "app dark" : "app light"}>
+          <div className={`app ${isdarkMode ? "dark" : "light"} overflow-hidden`}>
             <Particle />
             <Content />
           </div>

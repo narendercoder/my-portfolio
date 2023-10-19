@@ -110,7 +110,8 @@ const Wrapper = styled.section`
     max-width: 100vh;
     max-height: 400px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-column-gap: 0rem;
     grid-row-gap: 0rem;
     margin: 0 -30px;
@@ -126,17 +127,19 @@ const Wrapper = styled.section`
       flex: 1 0 0%;
     }
     .grid-item {
-      padding: 20px;
       .box-item {
         position: relative;
         text-align: center;
-        width: 180px;
+        width: 100%;
         overflow: hidden;
+        a{
+          color: rgba(255, 255, 255, 0.85);
+        }
         &:hover {
           img {
             transform: scale(1.2);
           }
-          a{
+          a {
             color: ${({ theme }) => theme.highlight.primary};
           }
           .icon-box {
@@ -150,7 +153,11 @@ const Wrapper = styled.section`
           width: 100%;
           height: 100%;
           border-radius: 10px;
-          background: rgba(0, 0, 0, 0.3);
+          background: linear-gradient(
+            135deg,
+            rgba(255, 152, 0, 0.2) 0%,
+            rgba(255, 152, 0, 0.01) 100%
+          );
           .p-icon {
             position: relative;
             top: 40%;
@@ -166,8 +173,8 @@ const Wrapper = styled.section`
           position: relative;
           overflow: hidden;
           border-radius: 4px;
-          width: 180px;
-          height: 146px;
+          width: 100%;
+          height: 100%;
 
           a {
             display: initial;
@@ -175,7 +182,7 @@ const Wrapper = styled.section`
             img {
               position: relative;
               width: 100%;
-              height: 100%;
+              height: auto;
               transition: all 0.5s;
             }
           }
@@ -183,10 +190,16 @@ const Wrapper = styled.section`
 
         .desc {
           position: relative;
-          padding: 10px 0 0 0;
-
+          padding: 15px 0 0 0;
+          margin-bottom: 1rem;
+          
           a {
-            font-size: 0.7rem;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            padding-bottom: 10px;
+            text-transform: capitalize;
             &::before {
               right: auto;
               left: 0;
@@ -194,6 +207,7 @@ const Wrapper = styled.section`
               top: auto;
               width: 100%;
               height: 1px;
+              opacity: 0.5;
             }
           }
         }
