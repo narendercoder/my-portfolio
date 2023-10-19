@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styled from "styled-components";
 import { ProjImg } from "../Config/Config";
@@ -6,12 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import Works from "../Components/Works";
 
 const Portfolio = () => {
+  const [isActive, SetIsActive] = useState("all")
   const [items, setitems] = useState(ProjImg);
+  const [collection, setCollection] = useState([])
 
   const filterItem = (categItem) => {
-    if (categItem === "all") {
-      setitems(ProjImg);
-    } else {
+      SetIsActive(categItem)
       const updatedItems = ProjImg.filter((curElem) => {
         return curElem.category === categItem;
       });
@@ -27,8 +27,15 @@ const Portfolio = () => {
         return 0;
       });
       setitems(result);
-    }
+    
   };
+
+  console.log(isActive)
+
+  useEffect(()=>{
+     setCollection([... new Set(ProjImg.map((item)=>item.category))])
+  }, [])
+
   return (
     <Wrapper>
       <div className="card-inner p-section">
@@ -39,31 +46,46 @@ const Portfolio = () => {
               Works
             </div>
           </div>
-          <div className="p-btns">
+          <div className={`p-btns`}>
+            
             <button
-              className="btn p-btn active"
-              data-aos="fade-up"
+              className={`btn p-btn ${isActive === "all" ? "active" : ""}`}
               data-btn-num="2"
-              onClick={() => filterItem("all")}
+              onClick={() => {
+                setitems(ProjImg)
+                SetIsActive("all")
+                } }
             >
               All
             </button>
-            <button
-              className="btn p-btn"
-              data-aos="fade-up"
+          {
+            collection.map((item)=>{
+              return (
+                <button
+                key={item}
+              className={`btn p-btn ${isActive === item ? "active" : ""}`}
+              data-btn-num="2"
+              onClick={() => filterItem(item)}
+            >
+              {item}
+            </button>
+              )
+            })
+          }
+            {/* <button
+              className={`btn p-btn ${isActive ? "active" : ""}`}
               data-btn-num="2"
               onClick={() => filterItem("react")}
             >
               React
             </button>
             <button
-              className="btn p-btn"
-              data-aos="fade-up"
+              className={`btn p-btn ${isActive ? "active" : ""}`}
               data-btn-num="3"
               onClick={() => filterItem("js")}
             >
               Javascript
-            </button>
+            </button> */}
           </div>
           <motion.div layout className="grid-items">
             <AnimatePresence>
@@ -108,9 +130,9 @@ const Wrapper = styled.section`
   .p-section .grid-items {
     position: relative;
     max-width: 100vh;
-    max-height: 400px;
+    max-height: 500px;
     display: grid;
-    padding: 20px;
+    padding: 10px;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-column-gap: 0rem;
     grid-row-gap: 0rem;
@@ -132,9 +154,6 @@ const Wrapper = styled.section`
         text-align: center;
         width: 100%;
         overflow: hidden;
-        a{
-          color: rgba(255, 255, 255, 0.85);
-        }
         &:hover {
           img {
             transform: scale(1.2);
@@ -230,6 +249,7 @@ const Wrapper = styled.section`
     border-radius: 0;
     color: rgb(${({ theme }) => theme.title.primary});
     border-bottom: 1px solid transparent;
+    text-transform: capitalize
   }
   .p-btn.active {
     border-bottom: 1px solid ${({ theme }) => theme.highlight.primary};

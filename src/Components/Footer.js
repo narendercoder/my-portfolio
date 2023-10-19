@@ -8,9 +8,10 @@ const Footer = () => {
       <div className="f-container">
         <div className="f-credits">
           <p>
-           ©️ 2022 All rights reserved | designed with <span className="text-white">❤️</span> by <span className="highlight">Narender
-            Singh Bisht</span>
+           ©️ 2022 All rights reserved | 
           </p>
+          <p> designed with <span className="text-white">❤️</span> by <span className="highlight">Narender
+            Singh Bisht</span></p>
         </div>
       </div>
     </div>
@@ -24,6 +25,7 @@ const Wrapper = styled.footer`
  width: 100vw;
  height: auto;
  bottom: 0;
+
 .f-section {
     display: flex;
     justify-content: center;
@@ -45,6 +47,10 @@ const Wrapper = styled.footer`
     .f-credits {
         width: 100%;
         height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         p {
             margin: 0;
             padding-bottom: 2px;

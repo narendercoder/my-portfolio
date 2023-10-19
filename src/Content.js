@@ -24,7 +24,7 @@ const Content = () =>{
 
   return (
      <BrowserRouter>
-      <div className="wrapper">
+      <>
         <div className="container">
           <Routes>
             <Route path="/" element={<Header />}>
@@ -39,7 +39,7 @@ const Content = () =>{
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
-      </div>
+      </>
       <Footer />
     </BrowserRouter>
 

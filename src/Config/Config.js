@@ -138,14 +138,14 @@ export const ProjImg = [
     {
         id: "5",
         name: "Snake Game",
-        category: "js",
+        category: "javascript",
         imgsrc: "projectImg/js/p_0.jpg",
         href: "https://narendercoder.github.io/Snake-Game/"
     },
     {
         id: "6",
         name: "Spotify",
-        category: "js",
+        category: "javascript",
         imgsrc: "projectImg/js/p_1.jpg",
         href: "https://narendercoder.github.io/Spotify/"
     },
@@ -159,7 +159,7 @@ export const ProjImg = [
     {
         id: "8",
         name: "Tic-Tac-toe",
-        category: "js",
+        category: "javascript",
         imgsrc: "projectImg/js/p_2.jpg",
         href: "https://narendercoder.github.io/Tic_Tac_Toe/"
     },

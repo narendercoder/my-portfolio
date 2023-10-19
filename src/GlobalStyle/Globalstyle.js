@@ -80,14 +80,6 @@ span{
 }
 
 
-.wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  min-height: calc(100vh - 45px);
-}
-
 .card-section{
   &::after{
     background: rgb(49, 49, 58);
@@ -131,8 +123,8 @@ span{
     }
 
 .container {
-  margin: 8vh 6vw;
   position: relative;
+  margin: 8vh 6vw;
   top: 0;
   left: 0;
   width: 100%;
@@ -215,7 +207,7 @@ input[type="submit"] {
   height: auto;
   border-radius: 0 4px 4px 0;
   transform-origin: center left;
-  z-index: 10;
+  ${'' /* z-index: 10; */}
   animation: fadeInLeft 1s;
 
   &:before,

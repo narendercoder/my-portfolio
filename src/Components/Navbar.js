@@ -222,6 +222,17 @@ const Wrapper = styled.section`
 
   .header{
     .toggle-header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .link{
+        font-size: 2rem;
+        height: 100%;
+        color: rgb(${({ theme }) => theme.title.primary});
+        &::before{
+          content: none;
+        }
+      }
       .outline-close{
         display: none;
       }
@@ -284,8 +295,7 @@ const Wrapper = styled.section`
     z-index: 80;
     transition: all 0.3s linear;
     cursor: pointer;
-    
-    
+  
   }
 
   @media screen and (max-width: 560px) {
@@ -329,7 +339,7 @@ const Wrapper = styled.section`
           height: auto;
           img {
             float: left;
-            width: 20%;
+            width: 40px;
             border-radius: 50%;
           }
         }

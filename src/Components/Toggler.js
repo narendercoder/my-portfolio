@@ -47,10 +47,15 @@ display:flex;
 justify-content: center;
 align-items: center;
 font-size: 16px;
-position: absolute;
-right: 30px;
-top: 15px;
+position: relative;
 z-index: 100;
+margin-right: 1rem; 
+@media (min-width: 561px) {
+  position: absolute;
+  margin-right: 0;
+  right: 30px;
+  top: 15px;
+}
 
 .checkbox {
     opacity: 1;
@@ -64,7 +69,7 @@ z-index: 100;
     transform: translateX(24px);
   }
 .checkbox-label{
-    background-color: #333;
+    background-color: rgb(0, 0, 0);
     width: 50px;
     height: 26px;
     border-radius: 50px;
