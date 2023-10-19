@@ -7,25 +7,30 @@ import Works from "../Components/Works";
 
 const Portfolio = () => {
   const [isActive, SetIsActive] = useState("all")
-  const [items, setitems] = useState(ProjImg);
-  const [collection, setCollection] = useState([])
+  const [items, setitems] = useState([]);
+  const [collection, setCollection] = useState([]);
+
+  const sortItem = (Items) =>{
+    const result = Items.sort(function (a, b) {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
+      if (nameA > nameB) {
+        return 1;
+      }
+      if (nameA < nameB) {
+        return -1;
+      }
+      return 0;
+    });
+    return result;
+  }
 
   const filterItem = (categItem) => {
       SetIsActive(categItem)
       const updatedItems = ProjImg.filter((curElem) => {
         return curElem.category === categItem;
       });
-      const result = updatedItems.sort(function (a, b) {
-        const nameA = a.name.toUpperCase();
-        const nameB = b.name.toUpperCase();
-        if (nameA > nameB) {
-          return 1;
-        }
-        if (nameA < nameB) {
-          return -1;
-        }
-        return 0;
-      });
+      const result = sortItem(updatedItems)
       setitems(result);
     
   };
@@ -33,6 +38,7 @@ const Portfolio = () => {
   console.log(isActive)
 
   useEffect(()=>{
+     setitems(ProjImg);
      setCollection([... new Set(ProjImg.map((item)=>item.category))])
   }, [])
 
@@ -46,7 +52,7 @@ const Portfolio = () => {
               Works
             </div>
           </div>
-          <div className={`p-btns`}>
+          <div className={`p-btns`} data-aos="fade-up">
             
             <button
               className={`btn p-btn ${isActive === "all" ? "active" : ""}`}
@@ -63,29 +69,16 @@ const Portfolio = () => {
               return (
                 <button
                 key={item}
-              className={`btn p-btn ${isActive === item ? "active" : ""}`}
-              data-btn-num="2"
-              onClick={() => filterItem(item)}
+                className={`btn p-btn ${isActive === item ? "active" : ""}`}
+                data-btn-num="2"
+                onClick={() => filterItem(item)}
             >
               {item}
             </button>
               )
             })
           }
-            {/* <button
-              className={`btn p-btn ${isActive ? "active" : ""}`}
-              data-btn-num="2"
-              onClick={() => filterItem("react")}
-            >
-              React
-            </button>
-            <button
-              className={`btn p-btn ${isActive ? "active" : ""}`}
-              data-btn-num="3"
-              onClick={() => filterItem("js")}
-            >
-              Javascript
-            </button> */}
+           
           </div>
           <motion.div layout className="grid-items">
             <AnimatePresence>
@@ -102,6 +95,7 @@ const Portfolio = () => {
 export default Portfolio;
 
 const Wrapper = styled.section`
+
   .card-wrap {
     overflow: hidden;
     padding-bottom: 30px;
@@ -130,9 +124,10 @@ const Wrapper = styled.section`
   .p-section .grid-items {
     position: relative;
     max-width: 100vh;
-    max-height: 500px;
+    max-height: 450px;
     display: grid;
     padding: 10px;
+    padding-bottom: 50px;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-column-gap: 0rem;
     grid-row-gap: 0rem;

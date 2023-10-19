@@ -116,67 +116,75 @@ export const ProjImg = [
     },
     {
         id: "2",
+        name: "NotePlus",
+        category: "react",
+        imgsrc: "projectImg/react/p_7.png",
+        href: "https://note-plus-react.vercel.app"
+    },
+    {
+        id: "3",
         name: "Pokemon-app",
         category: "react",
         imgsrc: "projectImg/react/p_0.jpg",
         href: "https://react-pokemon-app1.netlify.app/"
     },
     {
-        id: "3",
+        id: "4",
         name: "Crypto-Tracker",
         category: "react",
         imgsrc: "projectImg/react/p_1.jpg",
         href: "https://crypto-tracker1.netlify.app/"
     },
     {
-        id: "4",
+        id: "5",
         name: "Weather-app",
         category: "react",
         imgsrc: "projectImg/react/p_2.jpg",
         href: "https://weather-app-132.netlify.app/"
     },
     {
-        id: "5",
+        id: "6",
         name: "Snake Game",
         category: "javascript",
         imgsrc: "projectImg/js/p_0.jpg",
         href: "https://narendercoder.github.io/Snake-Game/"
     },
     {
-        id: "6",
+        id: "7",
         name: "Spotify",
         category: "javascript",
         imgsrc: "projectImg/js/p_1.jpg",
         href: "https://narendercoder.github.io/Spotify/"
     },
     {
-        id: "7",
+        id: "8",
         name: "Todolist",
         category: "react",
         imgsrc: "projectImg/react/p_4.jpg",
         href: "https://todolist82.netlify.app/"
     },
     {
-        id: "8",
+        id: "9",
         name: "Tic-Tac-toe",
         category: "javascript",
         imgsrc: "projectImg/js/p_2.jpg",
         href: "https://narendercoder.github.io/Tic_Tac_Toe/"
     },
     {
-        id: "9",
+        id: "10",
         name: "E-talk",
         category: "react",
         imgsrc: "projectImg/react/p_5.png",
         href: "https://e-talk.vercel.app/"
     },
     {
-        id: "10",
+        id: "11",
         name: "E-commerce",
         category: "react",
         imgsrc: "projectImg/react/p_6.png",
         href: "https://e-trade.netlify.app/"
-    }
+    },
+    
     ]
 export const Experience=[
     
