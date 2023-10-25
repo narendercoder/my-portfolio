@@ -39,7 +39,7 @@ const Portfolio = () => {
 
   useEffect(()=>{
      setitems(ProjImg);
-     setCollection([... new Set(ProjImg.map((item)=>item.category))])
+     setCollection([...new Set(ProjImg.map((item)=>item.category))])
   }, [])
 
   return (
